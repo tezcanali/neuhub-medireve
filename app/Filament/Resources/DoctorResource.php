@@ -57,7 +57,7 @@ class DoctorResource extends Resource
                                         'xl' => 3,
                                         '2xl' => 3,
                                     ]),
-                                Textarea::make('short_description')
+                                RichEditor::make('short_description')
                                     ->label('Kısa İçerik')
                                     ->columnSpan([
                                         'sm' => 2,
