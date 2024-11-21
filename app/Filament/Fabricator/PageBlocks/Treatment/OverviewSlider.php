@@ -24,7 +24,6 @@ class OverviewSlider extends PageBlock
                 Textarea::make('description')
                     ->label('Açıklama')
                     ->default('There are different hair transplant techniques to meet the different needs and preferences of the patients. Female hair transplant has the same technique options as male hair transplant. Hair transplant Turkey with Medireve offers all the advanced techniques for its patients!')
-                    ->required()
                     ->columnSpan(3),
 
                 Repeater::make('slides')

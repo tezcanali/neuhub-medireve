@@ -7,5 +7,8 @@ return [
         'name' => 'İsim',
         'status' => 'Durum',
         'jobTitle' => 'Ünvan',
+        'email' => 'E-posta',
+        'phone' => 'Telefon Numarası',
+        'form-type' => 'Form Türü'
     ],
 ];

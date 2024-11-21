@@ -31,6 +31,8 @@ class GalleryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-photo';
 
+    protected static ?string $navigationGroup = 'İçerik';
+
     protected static ?string $label = 'Galeri';
 
     protected static ?int $navigationSort = 3;

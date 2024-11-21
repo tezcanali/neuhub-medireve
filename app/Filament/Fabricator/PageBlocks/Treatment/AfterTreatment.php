@@ -31,7 +31,6 @@ class AfterTreatment extends PageBlock
                             ->columnSpan(4),
                         RichEditor::make('content')
                             ->label('İçerik')
-                            ->required()
                             ->columnSpan(6),
                     ])
                     ->defaultItems(6)
