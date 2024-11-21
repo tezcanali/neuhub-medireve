@@ -7,7 +7,6 @@ use Filament\Forms\Components\Builder\Block;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
-use Illuminate\Support\Facades\Schema;
 
 class Approved extends PageBlock
 {
@@ -23,12 +22,7 @@ class Approved extends PageBlock
                 Select::make('doctors')
                     ->label('Doktorlar')
                     ->multiple()
-                    ->options(
-                    // Tablo var mı kontrol et, yoksa boş array döndür
-                        Schema::hasTable('doctors')
-                            ? Doctor::all()->pluck('name', 'id')
-                            : []
-                    )
+                    ->options(Doctor::all()->pluck('name', 'id'))
                     ->searchable()
                     ->preload()
                     ->required()
@@ -38,22 +32,17 @@ class Approved extends PageBlock
 
     public static function mutateData(array $data): array
     {
-        // Önce tablo var mı kontrol et
-        if (!Schema::hasTable('doctors')) {
-            return $data;
-        }
-
         $data['doctors'] = Doctor::whereIn('id', $data['doctors'])
             ->get()
             ->map(function ($doctor) {
                 return [
-                    'image' => $doctor->image ?? null,
-                    'name' => $doctor->name ?? 'İsimsiz Doktor',
-                    'title' => $doctor->job_title ?? '-',
+                    'image' => $doctor->image,
+                    'name' => $doctor->name,
+                    'title' => $doctor->job_title,
                     'experience' => $doctor->experience ?? '-',
                     'education' => $doctor->education ?? '-',
                     'email' => $doctor->email ?? '-',
-                    'link' => $doctor->slug ? url('/doctors/' . $doctor->slug) : '#',
+                    'link' => url('/doctors/' . $doctor->slug),
                 ];
             })
             ->toArray();
