@@ -41,7 +41,9 @@
             <div class="col-lg-8">
                 <div class="bg-white p-xl-5 p-4">
                     <div class="fs-3 fw-normal text-primary pb-4">{{ $bottomTitle }}</div>
-                    <div class="text-gray-700">{{ $bottomContent }}</div>
+                    @if($bottomContent)
+                        <div class="text-gray-700">{{ $bottomContent }}</div>
+                    @endif
                 </div>
             </div>
         </div>

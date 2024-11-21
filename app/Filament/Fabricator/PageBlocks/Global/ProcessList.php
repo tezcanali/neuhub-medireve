@@ -63,7 +63,6 @@ class ProcessList extends PageBlock
 
                 Textarea::make('bottom_content')
                     ->label('Alt İçerik')
-                    ->required()
                     ->columnSpan(6),
             ])
             ->columns(6)->visible(fn ($get) => $get('../layout') == 'treatment');
