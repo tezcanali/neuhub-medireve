@@ -48,6 +48,7 @@ class Approved extends PageBlock
                     'education' => $doctor->education ?? '-',
                     'email' => $doctor->email ?? '-',
                     'link' => url('/doctors/' . $doctor->slug),
+                    'short_description' => $doctor->short_description,
                 ];
             })
             ->toArray();
