@@ -27,7 +27,6 @@ class AfterTreatment extends PageBlock
                             ->columnSpan(2),
                         TextInput::make('subtitle')
                             ->label('Alt Başlık')
-                            ->required()
                             ->columnSpan(4),
                         RichEditor::make('content')
                             ->label('İçerik')

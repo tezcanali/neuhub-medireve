@@ -47,7 +47,6 @@ class Timeline extends PageBlock
 
                         TextInput::make('period_range')
                             ->label('Dönem Aralığı')
-                            ->required()
                             ->columnSpan(3),
 
                         Textarea::make('content')

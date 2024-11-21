@@ -36,7 +36,6 @@ class HeroText extends PageBlock
 
                 TextInput::make('note')
                     ->label('Not')
-                    ->required()
                     ->columnSpan(6),
 
                 TextInput::make('button_text')

@@ -43,7 +43,6 @@ class OverviewSlider extends PageBlock
 
                         TextInput::make('slide_title')
                             ->label('Slayt Başlığı')
-                            ->required()
                             ->columnSpan(6),
 
                         Textarea::make('slide_content')

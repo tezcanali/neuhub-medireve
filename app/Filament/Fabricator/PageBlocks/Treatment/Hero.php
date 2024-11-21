@@ -25,7 +25,7 @@ class Hero extends PageBlock
                     ->deletable(true)
                     ->acceptedFileTypes(['image/*'])
                     ->columnSpan(6),
-                    
+
                 TextInput::make('rating')
                     ->label('Değerlendirme Puanı')
                     ->required()
@@ -48,7 +48,6 @@ class Hero extends PageBlock
 
                 Textarea::make('description')
                     ->label('Açıklama')
-                    ->required()
                     ->columnSpan(6),
 
                 TextInput::make('button_text')
