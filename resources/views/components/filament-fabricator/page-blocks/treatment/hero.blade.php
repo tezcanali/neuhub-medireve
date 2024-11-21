@@ -144,7 +144,7 @@
                             <div class="hero-image position-relative mt-md-0 mt-4">
                                 <div
                                     class="shape w-700px h-700px bg-white rounded-circle position-absolute start-0 top-0"></div>
-                                <img src="{{ \Illuminate\Support\Facades\Storage::url($heroImage) }}"
+                                <img src="{{ asset('front/img/gr.svg') }}"
                                      class="hero-img h-700px object-fit-contain position-relative z-1"/>
                             </div>
                         </div>
