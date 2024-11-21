@@ -26,7 +26,7 @@
                                 <div class="d-flex flex-column gap-4 p-2">
                                     <div class="icon flex-shrink-0 h-35px">
                                         <svg width="55" height="45" viewBox="0 0 55 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            {!! $item['iconPath'] !!}
+                                            {!! $item['icon_path'] !!}
                                         </svg>
                                     </div>
                                     <div class="fs-5 fw-light text-gray-800">{{ $item['title'] }}</div>
