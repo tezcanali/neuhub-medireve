@@ -3,6 +3,7 @@
 namespace App\Filament\Fabricator\PageBlocks\Treatment;
 
 use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Repeater;
@@ -89,7 +90,7 @@ class PatientReview extends PageBlock
                     ->required()
                     ->columnSpan(6),
 
-                Textarea::make('why_content')
+                RichEditor::make('why_content')
                     ->label('Neden İçeriği')
                     ->required()
                     ->columnSpan(6),

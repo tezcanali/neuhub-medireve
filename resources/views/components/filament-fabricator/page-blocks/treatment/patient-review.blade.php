@@ -58,7 +58,7 @@
         <div class="col-lg-8">
             <div class="pe-lg-5 pe-4 me-lg-5 ps-lg-0 ps-3">
                 <p class="fs-5 fw-light text-balance">{{ $whyDescription }}</p>
-                <div>{{ $whyContent }}</div>
+                <div>{!! $whyContent !!}</div>
             </div>
         </div>
     </div>
