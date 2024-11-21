@@ -39,9 +39,10 @@ class ImageText extends PageBlock
                     ->columnSpan(6),
 
                 RichEditor::make('content')
-                ->label('İçerik'),
+                    ->label('İçerik')
+                    ->columnSpan(6),
             ])
-            ->columns(6)->visible(fn ($get) => $get('../layout') == 'treatment');
+            ->columns(6)->visible(fn($get) => $get('../layout') == 'treatment');
     }
 
     public static function mutateData(array $data): array
