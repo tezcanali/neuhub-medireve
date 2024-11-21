@@ -21,6 +21,10 @@ class Doctor extends Model
         'slug',
         'social',
         'image',
+        'short_description',
+        'experience',
+        'education',
+        'languages',
     ];
 
     protected $casts = [
