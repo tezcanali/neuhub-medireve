@@ -10,6 +10,7 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Tabs;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -56,6 +57,14 @@ class DoctorResource extends Resource
                                         'xl' => 3,
                                         '2xl' => 3,
                                     ]),
+                                Textarea::make('short_description')
+                                    ->label('Kısa İçerik')
+                                    ->required()
+                                    ->columnSpan([
+                                        'sm' => 2,
+                                        'xl' => 6,
+                                        '2xl' => 6,
+                                    ]),
                                 RichEditor::make('content')
                                     ->label('Özgeçmiş')
                                     ->required()
@@ -86,17 +95,29 @@ class DoctorResource extends Resource
                                         'xl' => 6,
                                         '2xl' => 6,
                                     ]),
-                                RichEditor::make('associations')
-                                    ->label('Dernekler & Üyelikler')
-                                    ->required()
+                                RichEditor::make('experience')
+                                    ->label('Deneyimler')
                                     ->columnSpan([
                                         'sm' => 2,
                                         'xl' => 3,
                                         '2xl' => 3,
                                     ]),
+                                RichEditor::make('education')
+                                    ->label('Eğitimler')
+                                    ->columnSpan([
+                                        'sm' => 2,
+                                        'xl' => 3,
+                                        '2xl' => 3,
+                                    ]),
+                                RichEditor::make('languages')
+                                    ->label('Diller')
+                                    ->columnSpan([
+                                        'sm' => 2,
+                                        'xl' => 6,
+                                        '2xl' => 6,
+                                    ]),
                                 RichEditor::make('publications')
                                     ->label('Yayınlar')
-                                    ->required()
                                     ->columnSpan([
                                         'sm' => 2,
                                         'xl' => 3,
@@ -155,7 +176,7 @@ class DoctorResource extends Resource
             ->actions([
                 Action::make('visit')
                     ->label(__('filament-fabricator::page-resource.actions.visit'))
-                    ->url(fn ($record) => url('/doctors/' . $record->slug))
+                    ->url(fn($record) => url('/doctors/' . $record->slug))
                     ->icon('heroicon-o-arrow-top-right-on-square')
                     ->openUrlInNewTab()
                     ->color('success'),
