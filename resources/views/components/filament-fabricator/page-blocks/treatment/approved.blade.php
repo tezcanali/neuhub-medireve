@@ -37,9 +37,7 @@
                                         <span class="text-secondary">{{ $doctor['title'] }}</span>
                                     </div>
                                     <div class="d-flex flex-column gap-1 text-white fs-14 py-lg-5 py-4">
-                                        <span>Experience Date : {{ $doctor['experience'] }}</span>
-                                        <span>Education: {{ $doctor['education'] }}</span>
-                                        <span>E-mail: {{ $doctor['email'] }}</span>
+                                        <span>{!! $doctor['short_description'] !!}</span>
                                     </div>
                                     <div class="d-flex align-items-center gap-4 justify-content-between">
                                         <div class="d-flex align-items-center gap-4">
