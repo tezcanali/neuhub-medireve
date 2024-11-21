@@ -12,15 +12,15 @@
                     <path d="M204.113 411C198.857 358.091 211.505 235.314 304.152 167.485" stroke="#ABABAB"/>
                 </svg>
             </div>
-            <img src="{{ $meetImage }}" class="meet-img h-300px flex-shrink-0 position-relative z-3"/>
+            <img src="{{ \Illuminate\Support\Facades\Storage::url($meetImage) }}" class="meet-img h-300px flex-shrink-0 position-relative z-3"/>
             <div class="fs-72 lh-sm text-blue-3 text-balance">{{ $title }}</div>
         </div>
         <div class="pt-4 text-blue-3">
             <div class="fs-3 fw-semibold mb-md-3 mb-2">{{ $ratingText }}</div>
             <div class="row g-4">
                 <div class="col-lg-2 col-md-3">
-                    <img src="{{ $trustpilotLogo }}" class="img-fluid my-4 pe-xl-4 d-md-block d-none"/>
-                    <img src="{{ $trustpilotLogo }}" class="h-60px d-md-none d-block"/>
+                    <img src="{{ \Illuminate\Support\Facades\Storage::url($trustpilotLogo) }}" class="img-fluid my-4 pe-xl-4 d-md-block d-none"/>
+                    <img src="{{ \Illuminate\Support\Facades\Storage::url($trustpilotLogo) }}" class="h-60px d-md-none d-block"/>
                     <div class="pt-4">Based on <span class="text-decoration-underline fw-normal">{{ $reviewCount }} reviews</span>
                     </div>
                 </div>

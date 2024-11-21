@@ -24,7 +24,7 @@
                 <div class="d-lg-flex d-none align-items-end mb-xl-5 mb-4">
                     <div class="d-flex align-items-start flex-column gap-0">
                         <div class="text-center d-lg-block d-none mt-n5 ms-5">
-                            <img src="{{ $findImage }}" class="find-img h-275px mt-n4"/>
+                            <img src="{{ \Illuminate\Support\Facades\Storage::url($findImage) }}" class="find-img h-275px mt-n4"/>
                         </div>
                         <div class="get-gradient rounded-pill p-4 d-flex align-items-center gap-4 text-primary fs-5">
                             <div class="icon flex-shrink-0">

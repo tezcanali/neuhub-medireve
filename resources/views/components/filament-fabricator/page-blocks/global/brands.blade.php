@@ -6,7 +6,7 @@
                 @foreach($brands as $brand)
                 <div class="swiper-slide">
                     <a href="{{ $brand['url'] ?? '#' }}" class="d-block text-center">
-                        <img src="{{ $brand['image'] }}" class="w-150px h-100px object-fit-contain"/>
+                        <img src="{{ \Illuminate\Support\Facades\Storage::url($brand['image']) }}" class="w-150px h-100px object-fit-contain"/>
                     </a>
                 </div>
                 @endforeach

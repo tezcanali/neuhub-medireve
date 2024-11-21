@@ -2,7 +2,7 @@
 <section class="bg-gray-400 py-xl-5 py-4 overflow-hidden">
     <div class="container-fluid">
         <div class="bg-gray-100 py-lg-6 py-4 rounded-3 position-relative overflow-hidden">
-            <img src="{{ $backgroundImage }}" class="h-400px position-absolute end-0 bottom-0 opacity-25"/>
+            <img src="{{ \Illuminate\Support\Facades\Storage::url($backgroundImage) }}" class="h-400px position-absolute end-0 bottom-0 opacity-25"/>
             <div class="container-xl py-xl-5 position-relative z-2">
                 <div class="main-title d-flex align-items-center gap-md-5 gap-3 text-primary pb-xl-5 pb-4 position-relative z-3">
                     <div class="icon">

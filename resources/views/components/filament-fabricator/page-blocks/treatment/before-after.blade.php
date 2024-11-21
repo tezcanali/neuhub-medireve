@@ -30,9 +30,9 @@
                     <div class="swiper-wrapper">
                         @foreach($images as $item)
                         <div class="swiper-slide">
-                            <a href="{{ $item['image'] }}"
+                            <a href="{{ \Illuminate\Support\Facades\Storage::url($item['image']) }}"
                                class="d-block hover-img-scale overflow-hidden w-100 h-400px" data-fancybox="gallery">
-                                <img src="{{ $item['image'] }}" class="w-100 h-100 object-fit-cover"/>
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($item['image']) }}" class="w-100 h-100 object-fit-cover"/>
                             </a>
                         </div>
                         @endforeach

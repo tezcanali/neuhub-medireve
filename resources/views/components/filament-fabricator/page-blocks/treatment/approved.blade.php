@@ -28,7 +28,7 @@
                         <a href="{{ $doctor['link'] }}" class="bg-blue-6 p-lg-4 p-3 row w-800px row position-relative g-0">
                             <div class="overlay bg-blue-6 bg-opacity-75 position-absolute start-0 top-0 w-100 h-100"></div>
                             <div class="col-lg-5">
-                                <img src="{{ $doctor['image'] }}" class="w-100 h-325px object-fit-cover"/>
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($doctor['image']) }}" class="w-100 h-325px object-fit-cover"/>
                             </div>
                             <div class="col-lg-7">
                                 <div class="px-lg-4 px-3 py-lg-0 py-3">

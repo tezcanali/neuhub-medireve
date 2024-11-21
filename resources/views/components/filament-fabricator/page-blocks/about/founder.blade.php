@@ -28,7 +28,7 @@
                             <div class="fs-15">{{ $videoSubtitle }}</div>
                         </div>
                     </div>
-                    <img src="{{ $aboutImage }}" class="img-fluid"/>
+                    <img src="{{ \Illuminate\Support\Facades\Storage::url($aboutImage) }}" class="img-fluid"/>
                 </div>
             </div>
         </div>

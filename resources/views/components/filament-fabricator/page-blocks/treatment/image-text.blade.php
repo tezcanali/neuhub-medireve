@@ -23,7 +23,7 @@
                 <span class="fs-5">{{ $subtitle }}</span>
             </div>
         </div>
-        <img src="{{ $contentImage }}" class="w-100 h-300px object-fit-cover mb-lg-5 mb-4 mt-lg-0 mt-3"/>
+        <img src="{{ \Illuminate\Support\Facades\Storage::url($contentImage) }}" class="w-100 h-300px object-fit-cover mb-lg-5 mb-4 mt-lg-0 mt-3"/>
         <p class="fw-light">
             @foreach($steps as $step)
                 <li>{{ $step['stepContent'] }}</li>

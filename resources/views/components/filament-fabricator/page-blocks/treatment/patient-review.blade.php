@@ -28,7 +28,7 @@
                                 <div class="fs-15">{{ $review['procedureText'] }}</div>
                             </div>
                         </div>
-                        <img src="{{ $review['reviewImage'] }}" class="w-100 h-100 object-fit-cover"/>
+                        <img src="{{ \Illuminate\Support\Facades\Storage::url($review['reviewImage']) }}" class="w-100 h-100 object-fit-cover"/>
                     </a>
                 </div>
             @endforeach
@@ -53,7 +53,7 @@
     </div>
     <div class="row g-xl-5 g-4">
         <div class="col-lg-4">
-            <img src="{{ $whyImage }}" class="img-fluid"/>
+            <img src="{{ \Illuminate\Support\Facades\Storage::url($whyImage) }}" class="img-fluid"/>
         </div>
         <div class="col-lg-8">
             <div class="pe-lg-5 pe-4 me-lg-5 ps-lg-0 ps-3">

@@ -19,17 +19,17 @@
                     <div class="swiper-slide">
                         <div class="row g-0">
                             <div class="col-lg-6">
-                                <img src="{{ $slide['slideImage'] }}" class="w-100 h-500px object-fit-cover tech-img position-relative z-3"/>
+                                <img src="{{ $slide['slide_image'] }}" class="w-100 h-500px object-fit-cover tech-img position-relative z-3"/>
                             </div>
                             <div class="col-lg-6">
                                 <div class="bg-primary p-lg-5 p-4 rounded-3 rounded-start-0 position-relative">
                                     <div class="w-50 h-100 bg-primary position-absolute end-100 top-0 d-lg-block d-none"></div>
                                     <div class="ps-lg-4 text-white">
-                                        <div class="fs-3 fw-normal text-white">{{ $slide['slideTitle'] }}</div>
+                                        <div class="fs-3 fw-normal text-white">{{ $slide['slide_title'] }}</div>
                                         <div class="w-100 h-1px bg-blue-5 mt-4 mb-lg-5 mb-4"></div>
-                                        <p class="fs-18">{{ $slide['slideContent'] }}</p>
-                                        <a href="{{ $slide['buttonLink'] }}" class="d-flex align-items-center gap-3 text-secondary py-lg-4 py-3">
-                                            <span class="text-decoration-underline fw-light">{{ $slide['buttonText'] }}</span>
+                                        <p class="fs-18">{{ $slide['slide_content'] }}</p>
+                                        <a href="{{ $slide['button_link'] }}" class="d-flex align-items-center gap-3 text-secondary py-lg-4 py-3">
+                                            <span class="text-decoration-underline fw-light">{{ $slide['button_text'] }}</span>
                                             <i class="fa fa-arrow-right"></i>
                                         </a>
                                     </div>

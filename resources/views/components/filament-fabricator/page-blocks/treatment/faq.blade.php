@@ -1,6 +1,6 @@
 @aware(['page'])
 <section class="faq py-xl-5 py-4 position-relative">
-    <img src="{{ $backgroundImage }}" class="h-400px position-absolute end-0 bottom-0 opacity-25"
+    <img src="{{ \Illuminate\Support\Facades\Storage::url($backgroundImage) }}" class="h-400px position-absolute end-0 bottom-0 opacity-25"
          style="filter: blur(1px)"/>
     <div class="container-xl py-lg-4 position-relative z-3">
         <div
@@ -19,17 +19,17 @@
             @foreach($questions as $index => $item)
             <div class="accordion-item rounded border overflow-hidden mb-2">
                 <h2 class="accordion-header">
-                    <button class="accordion-button shadow-none fw-normal fs-5 {{ $index !== 0 ? 'collapsed' : '' }}" 
-                            type="button" 
+                    <button class="accordion-button shadow-none fw-normal fs-5 {{ $index !== 0 ? 'collapsed' : '' }}"
+                            type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#collapse{{ $index }}" 
-                            aria-expanded="{{ $index === 0 ? 'true' : 'false' }}" 
+                            data-bs-target="#collapse{{ $index }}"
+                            aria-expanded="{{ $index === 0 ? 'true' : 'false' }}"
                             aria-controls="collapse{{ $index }}">
                         {{ $item['question'] }}
                     </button>
                 </h2>
-                <div id="collapse{{ $index }}" 
-                     class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}" 
+                <div id="collapse{{ $index }}"
+                     class="accordion-collapse collapse {{ $index === 0 ? 'show' : '' }}"
                      data-bs-parent="#accordionExample">
                     <div class="accordion-body pt-0">
                         {{ $item['answer'] }}

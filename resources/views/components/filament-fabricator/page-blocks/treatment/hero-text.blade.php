@@ -21,7 +21,7 @@
                         {{ $titleLine1 }} <br/>
                         {{ $titleLine2 }}
                     </div>
-                    <img src="{{ $contentImage }}" class="what-content-img h-500px position-relative z-2 ms-5 d-xl-block d-none"/>
+                    <img src="{{ \Illuminate\Support\Facades\Storage::url($contentImage) }}" class="what-content-img h-500px position-relative z-2 ms-5 d-xl-block d-none"/>
                 </div>
             </div>
             <div class="col-xl-6">

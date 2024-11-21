@@ -1,6 +1,6 @@
 @aware(['page'])
 <section class="cost py-xl-5 py-4 position-relative">
-    <img src="{{ $backgroundImage }}" class="h-100 object-fit-cover position-absolute end-0 bottom-0 d-block"
+    <img src="{{ \Illuminate\Support\Facades\Storage::url($backgroundImage) }}" class="h-100 object-fit-cover position-absolute end-0 bottom-0 d-block"
          style="filter: blur(1px) opacity(0.5)"/>
     <div class="container-xl py-lg-4 position-relative z-3">
         <div

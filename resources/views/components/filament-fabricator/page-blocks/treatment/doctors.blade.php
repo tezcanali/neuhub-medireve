@@ -27,7 +27,7 @@
                         <a href="{{ $doctor['link'] }}"
                            class="d-block border border-black border-opacity-10 p-lg-5 p-4 pt-lg-0 pt-4 text-gray-800">
                             <div class="image mb-4 mt-lg-n5">
-                                <img src="{{ $doctor['image'] }}"
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($doctor['image']) }}"
                                      class="doctor-list-img w-100 h-500px object-fit-cover mt-lg-n5"/>
                             </div>
                             <div class="d-flex flex-column gap-1">
