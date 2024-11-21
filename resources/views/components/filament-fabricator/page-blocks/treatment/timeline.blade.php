@@ -19,8 +19,8 @@
                         <div class="col-xl-2 col-lg-3 col-md-4 col-6">
                             <div class="bg-white rounded-1 p-md-4 p-3 h-100 d-flex flex-column gap-3 text-yellow">
                                 <div class="fs-4 fw-normal lh-sm">
-                                    {{ $item['periodTitle'] }}<br/>
-                                    {{ $item['periodRange'] }}
+                                    {{ $item['period_title'] }}<br/>
+                                    {{ $item['period_range'] }}
                                 </div>
                                 <div class="fs-14">{{ $item['content'] }}</div>
                             </div>
