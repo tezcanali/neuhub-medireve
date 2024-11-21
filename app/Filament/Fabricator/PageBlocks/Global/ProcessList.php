@@ -12,7 +12,7 @@ class ProcessList extends PageBlock
 {
     public static function getBlockSchema(): Block
     {
-        return Block::make('treatment.process-list')
+        return Block::make('global.process-list')
             ->schema([
                 TextInput::make('title')
                     ->label('Başlık')
