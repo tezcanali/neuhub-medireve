@@ -1,0 +1,11 @@
+@use "custom";
+
+// import components
+
+@use "components/mixins";
+@use "components/content";
+
+// import sections
+
+@use "sections/footer";
+@use "sections/header";

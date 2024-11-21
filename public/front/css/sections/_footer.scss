@@ -1,0 +1,20 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+footer {
+    .footer-box {
+        .box {
+            @include media-breakpoint-down(lg) {
+                height: auto !important;
+            }
+        }
+        .text {
+            height: 40px;
+        }
+    }
+    .man-img {
+        @include media-breakpoint-down(xl) {
+            height: 250px !important;
+        }
+    }
+}

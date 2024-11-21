@@ -1,0 +1,805 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.marker-pin {
+    width: 120px;
+    height: 152px;
+    cursor: pointer;
+    background: url(../img/marker.svg) no-repeat center;
+    background-size: 100%;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.mapboxgl-popup-close-button {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    margin: 2px;
+}
+
+.mapboxgl-popup-content {
+    background: $black;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+    border-top-color: $black;
+}
+
+#map {
+    @include media-breakpoint-down(xl) {
+        height: 350px !important;
+    }
+    @include media-breakpoint-down(md) {
+        height: 300px !important;
+    }
+}
+
+.menu-box {
+    &:last-child {
+        margin-bottom: 0;
+        .menu-box-item {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+    .menu-box-item {
+        &.active {
+            .menu-box-item-content {
+                display: block;
+            }
+            .heading {
+                .icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .menu-box-item-content {
+            display: none;
+        }
+        .heading {
+            cursor: pointer;
+            .icon {
+                transition: 0.15s;
+            }
+        }
+    }
+}
+
+.mobile-img {
+    @include media-breakpoint-down(xl) {
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
+
+.hero {
+    height: 800px;
+    @include media-breakpoint-down(xl) {
+        height: 650px;
+    }
+    @include media-breakpoint-down(lg) {
+        height: 550px;
+    }
+    @include media-breakpoint-down(md) {
+        height: auto;
+    }
+    &.hero-page {
+        height: auto;
+        padding: 6rem 0 4rem 0;
+        @include media-breakpoint-down(md) {
+            padding: 1rem 0;
+        }
+    }
+    .bf-1,
+    .bf-2,
+    .bf-3 {
+        img {
+            @include media-breakpoint-down(md) {
+                height: 50px !important;
+            }
+        }
+    }
+    .hero-blur {
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background-color: #203075;
+        filter: blur(100px);
+        @include media-breakpoint-down(lg) {
+            height: 200px;
+        }
+    }
+    .shape-1 {
+        left: 500px;
+    }
+    .shape-2 {
+        left: 20px;
+    }
+    .hero-text {
+        .title {
+            @include media-breakpoint-down(xl) {
+                font-size: 40px !important;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 36px !important;
+            }
+        }
+    }
+    .get-icon {
+        @include media-breakpoint-down(lg) {
+            width: 70px !important;
+            height: 70px !important;
+        }
+        @include media-breakpoint-down(md) {
+            width: 50px !important;
+            height: 50px !important;
+        }
+    }
+    .get-box {
+        .title {
+            @include media-breakpoint-down(xl) {
+                font-size: 24px !important;
+            }
+            @include media-breakpoint-down(lg) {
+                font-size: 20px !important;
+            }
+        }
+        .text {
+            @include media-breakpoint-down(xl) {
+                font-size: 1rem !important;
+            }
+        }
+    }
+    .hero-image {
+        .shape {
+            @include media-breakpoint-down(xl) {
+                width: 500px !important;
+                height: 500px !important;
+            }
+            @include media-breakpoint-down(lg) {
+                width: 350px !important;
+                height: 350px !important;
+            }
+            @include media-breakpoint-down(md) {
+                width: 250px !important;
+                height: 250px !important;
+            }
+        }
+        .hero-img {
+            @include media-breakpoint-down(xl) {
+                height: 500px !important;
+            }
+            @include media-breakpoint-down(lg) {
+                height: 400px !important;
+            }
+            @include media-breakpoint-down(md) {
+                height: 300px !important;
+            }
+        }
+    }
+}
+
+.main-title {
+    .icon {
+        svg {
+            @include media-breakpoint-down(md) {
+                height: 20px;
+            }
+        }
+    }
+    .title {
+        @include media-breakpoint-down(md) {
+            font-size: 1.25rem !important;
+        }
+    }
+}
+
+.mobile-nav {
+    z-index: 101;
+}
+
+.best-list {
+    .swiper-slide {
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+        }
+    }
+    a {
+        .gradient {
+            background: linear-gradient(180deg, rgba(39, 35, 33, 0) 0%, rgba(39, 35, 33, 0.8) 100%);
+        }
+        @include media-breakpoint-down(xl) {
+            height: 450px !important;
+        }
+        @include media-breakpoint-down(lg) {
+            height: 400px !important;
+        }
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            height: 300px !important;
+        }
+    }
+}
+
+.before-after {
+    background: linear-gradient(90deg, #0e3175 0%, #23dcdf 100%);
+}
+
+.beforeafter-list {
+    padding: 8rem 0;
+    @include media-breakpoint-down(xl) {
+        padding: 6rem 0;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 1rem 0;
+    }
+    .pagination {
+        width: 560px;
+        @include media-breakpoint-down(xl) {
+            width: 400px !important;
+        }
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+        }
+        .beforeafter-button-prev {
+            @include media-breakpoint-down(md) {
+                width: 50px !important;
+                height: 50px !important;
+                margin-left: 10px;
+            }
+        }
+        .beforeafter-button-next {
+            @include media-breakpoint-down(md) {
+                width: 50px !important;
+                height: 50px !important;
+                margin-right: 10px;
+            }
+        }
+    }
+    .swiper-slide {
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+        }
+        &.swiper-slide-prev {
+            a {
+                filter: blur(1px) grayscale(1);
+            }
+        }
+        &.swiper-slide-next {
+            a {
+                filter: blur(1px) grayscale(1);
+            }
+        }
+        &.swiper-slide-active {
+            z-index: 91;
+            a {
+                transform: scale(1.2);
+                border: 7px solid rgba(255, 255, 255, 0.2);
+                box-shadow: 10px 0 60px #031043;
+                filter: none;
+                @include media-breakpoint-down(md) {
+                    transform: none;
+                    border: 0;
+                    box-shadow: none;
+                }
+            }
+        }
+        a {
+            filter: blur(1.5px) grayscale(1);
+            transition: all 0.3s ease;
+            &:hover {
+                filter: none;
+            }
+            @include media-breakpoint-down(xl) {
+                width: 300px !important;
+                height: 300px !important;
+            }
+            @include media-breakpoint-down(md) {
+                width: 100% !important;
+                height: 250px !important;
+            }
+        }
+    }
+}
+
+.meet-img {
+    @include media-breakpoint-down(lg) {
+        height: 250px !important;
+    }
+}
+
+.meet-shape {
+    svg {
+        @include media-breakpoint-down(lg) {
+            height: 250px !important;
+        }
+    }
+}
+
+.increase-list {
+    padding-left: 3rem;
+    @include media-breakpoint-down(md) {
+        padding-left: 0;
+    }
+    .swiper-slide {
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+        }
+    }
+    .pagination {
+        width: 450px;
+        margin-left: 3rem;
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+            margin: 0;
+        }
+        .increase-button-prev {
+            @include media-breakpoint-down(md) {
+                width: 50px !important;
+                height: 50px !important;
+                margin-left: 10px;
+            }
+        }
+        .increase-button-next {
+            @include media-breakpoint-down(md) {
+                width: 50px !important;
+                height: 50px !important;
+                margin-right: 10px;
+            }
+        }
+    }
+    a {
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+            height: 250px !important;
+        }
+    }
+}
+
+.find {
+    background: linear-gradient(90deg, #23dcdf 0%, #2b3a8d 100%);
+    .big-icon {
+        svg {
+            @include media-breakpoint-down(xl) {
+                height: 200px;
+            }
+        }
+    }
+    .find-img {
+        @include media-breakpoint-down(xl) {
+            height: 500px !important;
+        }
+    }
+}
+
+.find-form {
+    width: 800px;
+    position: relative;
+    left: -370px;
+    @include media-breakpoint-down(xl) {
+        width: 700px;
+    }
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.book-box {
+    @include media-breakpoint-down(xl) {
+        width: 300px !important;
+        height: 300px !important;
+    }
+    @include media-breakpoint-down(lg) {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    @include media-breakpoint-down(md) {
+        width: 175px !important;
+        height: 175px !important;
+    }
+    .woman-img {
+        margin-left: -150px;
+        @include media-breakpoint-down(xl) {
+            height: 250px !important;
+            margin-left: -100px;
+        }
+        @include media-breakpoint-down(lg) {
+            height: 200px !important;
+            margin-left: -150px;
+        }
+        @include media-breakpoint-down(md) {
+            height: 175px !important;
+            margin-left: -150px;
+        }
+    }
+}
+
+.blog-list {
+    .pagination {
+        width: 560px;
+    }
+    .swiper-slide {
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+        }
+        &.swiper-slide-active {
+            z-index: 91;
+            a {
+                opacity: 1;
+                background-color: $primary !important;
+                img {
+                    filter: none;
+                }
+                .text {
+                    color: $white !important;
+                }
+                hr {
+                    border-color: #5969ae !important;
+                }
+            }
+        }
+        a {
+            opacity: 0.5;
+            img {
+                filter: grayscale(1);
+            }
+            @include media-breakpoint-down(md) {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+.logo-button-next,
+.logo-button-prev {
+    @include media-breakpoint-down(md) {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+.photo-list {
+    a {
+        @include media-breakpoint-down(md) {
+            height: 250px !important;
+        }
+    }
+}
+
+.ba-list {
+    a {
+        @include media-breakpoint-down(md) {
+            height: 250px !important;
+        }
+    }
+}
+
+.tech-list {
+    .tech-img {
+        border-radius: 20px 0px 20px 0;
+        @include media-breakpoint-down(md) {
+            height: 250px !important;
+        }
+    }
+}
+
+.operation {
+    background: linear-gradient(90deg, #21106c 0%, #6650cc 100%);
+}
+
+.find-page {
+    background: linear-gradient(90deg, #c8c5da 0%, #ffffff 100%);
+    .big-icon {
+        svg {
+            @include media-breakpoint-down(xl) {
+                height: 200px;
+            }
+        }
+    }
+    .find-page-img {
+        @include media-breakpoint-down(xl) {
+            height: 500px !important;
+        }
+    }
+}
+
+.find-page-form {
+    width: 800px;
+    position: relative;
+    left: -370px;
+    @include media-breakpoint-down(xl) {
+        width: 700px;
+    }
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+        left: 0;
+    }
+}
+
+.get-gradient {
+    background: linear-gradient(90deg, #acb5e4 0%, #fefefe 100%);
+}
+
+.cost {
+    background: linear-gradient(90deg, #d6cee5 0%, #e9e3ef 100%);
+}
+
+.say-list {
+    .swiper-slide {
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+        }
+        a {
+            @include media-breakpoint-down(md) {
+                width: 100% !important;
+            }
+        }
+    }
+}
+
+.what-list {
+    .num {
+        border: 1px solid transparent;
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+        background-image: linear-gradient(#fff, #fff), linear-gradient(#000c40, #fff);
+    }
+}
+
+.doctors-list {
+    padding-top: 3.6rem;
+    @include media-breakpoint-down(lg) {
+        padding-top: 0;
+    }
+    .swiper-slide {
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+        }
+        &.swiper-slide-active {
+            z-index: 91;
+            a {
+                opacity: 1;
+                img {
+                    filter: none;
+                }
+            }
+        }
+        a {
+            opacity: 0.5;
+            img {
+                filter: grayscale(1);
+            }
+            @include media-breakpoint-down(md) {
+                width: 100% !important;
+            }
+        }
+    }
+    .doctor-list-img {
+        @include media-breakpoint-down(lg) {
+            height: 400px !important;
+        }
+        @include media-breakpoint-down(md) {
+            height: 300px !important;
+            object-fit: contain !important;
+        }
+    }
+}
+.doctors-button-prev,
+.doctors-button-next {
+    @include media-breakpoint-down(lg) {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+.faq {
+    background: linear-gradient(90deg, rgba(30, 14, 103, 0.2) 0%, rgba(130, 112, 213, 0.2) 100%);
+}
+
+.tag-list {
+    .swiper-slide {
+        @include media-breakpoint-down(md) {
+            width: 100% !important;
+        }
+        &.swiper-slide-active {
+            z-index: 91;
+            a {
+                .overlay {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+        }
+        a {
+            .overlay {
+                opacity: 1;
+                visibility: visible;
+                transition: all 0.3s ease;
+            }
+            @include media-breakpoint-down(lg) {
+                width: 600px !important;
+            }
+            @include media-breakpoint-down(md) {
+                width: 100% !important;
+            }
+        }
+    }
+}
+.tag-button-prev,
+.tag-button-next {
+    @include media-breakpoint-down(lg) {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}
+
+.swiper-nav {
+    @include media-breakpoint-down(lg) {
+        right: 0 !important;
+        left: inherit !important;
+        margin: 1rem;
+    }
+    button {
+        @include media-breakpoint-down(lg) {
+            width: 60px !important;
+            height: 60px !important;
+        }
+        @include media-breakpoint-down(md) {
+            width: 40px !important;
+            height: 40px !important;
+        }
+    }
+}
+
+.bf-title {
+    @include media-breakpoint-down(md) {
+        height: auto !important;
+    }
+}
+
+.logo-item {
+    @include media-breakpoint-down(md) {
+        height: auto !important;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.op-list {
+    a {
+        @include media-breakpoint-down(md) {
+            height: auto !important;
+        }
+    }
+}
+
+.table {
+    td,
+    th {
+        @include media-breakpoint-down(md) {
+            padding: 1rem !important;
+            font-size: 12px !important;
+        }
+    }
+}
+
+.call-box {
+    background: linear-gradient(90deg, #acb5e4 0%, #fefefe 100%);
+}
+.write-box {
+    background: linear-gradient(90deg, #23dcdf 0%, #fefefe 100%);
+}
+
+.contact-border {
+    @include media-breakpoint-down(lg) {
+        border: 0 !important;
+    }
+}
+
+.nav-blog {
+    .nav-link {
+        &.active {
+            background-color: transparent;
+            .icon {
+                background-color: $blue-3;
+                svg {
+                    color: $white;
+                    fill: $white;
+                    path {
+                        fill: white;
+                    }
+                }
+            }
+            span {
+                color: $blue-3 !important;
+            }
+        }
+    }
+}
+
+.blog-bg-color {
+    background-color: #fff3db;
+}
+
+.share-btn {
+    @include media-breakpoint-down(md) {
+        position: relative !important;
+    }
+}
+
+.ba-page-img {
+    @include media-breakpoint-down(lg) {
+        width: 100% !important;
+    }
+}
+
+.doctor-page-list {
+    @include media-breakpoint-down(lg) {
+        padding-bottom: 2rem;
+    }
+    a {
+        margin-bottom: 7rem;
+        @include media-breakpoint-down(xl) {
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+        }
+        @include media-breakpoint-down(lg) {
+            padding: 1rem !important;
+            margin-bottom: 0rem;
+        }
+        .image {
+            img {
+                @include media-breakpoint-down(xl) {
+                    height: 400px !important;
+                }
+            }
+        }
+    }
+}
+
+.doctor-detail-page-item {
+    @include media-breakpoint-down(xl) {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    @include media-breakpoint-down(lg) {
+        padding: 1rem !important;
+        margin-bottom: 0rem;
+    }
+
+    .image {
+        img {
+            @include media-breakpoint-down(xl) {
+                height: 400px !important;
+            }
+        }
+    }
+}
+
+.founder {
+    background: #d5cde4;
+}
+
+.nav-about {
+    .nav-link {
+        &.active {
+            color: white !important;
+            background-color: $blue-3 !important;
+        }
+    }
+}
+
+.map-contact {
+    @include media-breakpoint-down(lg) {
+        height: 300px !important;
+    }
+    @include media-breakpoint-down(md) {
+        height: 250px !important;
+    }
+}

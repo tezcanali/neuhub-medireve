@@ -1,0 +1,65 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.header {
+    width: 100%;
+    z-index: 71;
+    height: 120px;
+    @include media-breakpoint-down(xl) {
+        height: 100px;
+    }
+    @include media-breakpoint-down(md) {
+        height: 80px;
+    }
+    .logo {
+        img {
+            height: 28px;
+            @include media-breakpoint-down(lg) {
+                height: 26px !important;
+            }
+        }
+    }
+    &.active {
+        background-color: rgba($primary, 0.85) !important;
+        backdrop-filter: blur(10px);
+        @include media-breakpoint-down(xl) {
+            height: 100px;
+        }
+        @include media-breakpoint-down(md) {
+            height: 80px;
+        }
+    }
+    .webmenu {
+        li {
+            &:hover {
+                .submenu {
+                    display: block;
+                }
+            }
+            .submenu {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 100%;
+                display: none;
+            }
+        }
+    }
+}
+
+.mobile-menu-section {
+    .link-section {
+        .menu-box-item-content {
+            a {
+                color: #717fb1;
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.mobile-btn {
+    z-index: 101;
+}
