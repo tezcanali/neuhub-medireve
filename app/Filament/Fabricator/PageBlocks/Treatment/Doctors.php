@@ -22,7 +22,12 @@ class Doctors extends PageBlock
                 Select::make('doctors')
                     ->label('Doktorlar')
                     ->multiple()
-                    ->options(Doctor::all()->pluck('name', 'id'))
+                    ->options(function () {
+                        if (\Schema::hasTable('doctors')) {
+                            return Doctor::all()->pluck('name', 'id');
+                        }
+                        return [];
+                    })
                     ->searchable()
                     ->preload()
                     ->required()

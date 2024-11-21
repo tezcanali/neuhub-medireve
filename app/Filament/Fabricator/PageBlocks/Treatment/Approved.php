@@ -22,11 +22,36 @@ class Approved extends PageBlock
                 Select::make('doctors')
                     ->label('Doktorlar')
                     ->multiple()
-
+                    ->options(function () {
+                        if (\Schema::hasTable('doctors')) {
+                            return Doctor::all()->pluck('name', 'id');
+                        }
+                        return [];
+                    })
                     ->searchable()
                     ->preload()
                     ->required()
                     ->columnSpanFull()
-            ])->visible(fn ($get) => $get('../layout') == 'treatment');
+            ])->visible(fn($get) => $get('../layout') == 'treatment');
+    }
+
+    public static function mutateData(array $data): array
+    {
+        $data['doctors'] = Doctor::whereIn('id', $data['doctors'])
+            ->get()
+            ->map(function ($doctor) {
+                return [
+                    'image' => $doctor->image,
+                    'name' => $doctor->name,
+                    'title' => $doctor->job_title,
+                    'experience' => $doctor->experience ?? '-',
+                    'education' => $doctor->education ?? '-',
+                    'email' => $doctor->email ?? '-',
+                    'link' => url('/doctors/' . $doctor->slug),
+                ];
+            })
+            ->toArray();
+
+        return $data;
     }
 }
