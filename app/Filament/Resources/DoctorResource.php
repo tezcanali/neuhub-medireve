@@ -59,7 +59,6 @@ class DoctorResource extends Resource
                                     ]),
                                 Textarea::make('short_description')
                                     ->label('Kısa İçerik')
-                                    ->required()
                                     ->columnSpan([
                                         'sm' => 2,
                                         'xl' => 6,
