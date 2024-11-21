@@ -135,7 +135,7 @@
                                     </a>
                                     <a href="https://www.google.com/search?q=medireve+clinic&sca_esv=18fa2256dcc18326&sca_upv=1&hl=en&gl=us&sxsrf=ADLYWIJcpvSiBkoNqOtG7DeIdLyCK8exuA%3A1727383710717&source=hp&ei=nsj1ZpPxKKWTseMP-MD0wA8&iflsig=AL9hbdgAAAAAZvXWrkK1mNUvEYSF-hV_PQx6RI9VvrN2&ved=0ahUKEwiTuNzjveGIAxWlSWwGHXggHfgQ4dUDCBc&uact=5&oq=medireve+clinic&gs_lp=Egdnd3Mtd2l6Ig9tZWRpcmV2ZSBjbGluaWMyBBAjGCcyBxAAGIAEGA0yBxAAGIAEGA0yCBAAGA0YHhgPMggQABgIGA0YHjILEAAYgAQYhgMYigUyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYgAQYogQyCBAAGIAEGKIESIAgUABY3xxwAXgAkAEAmAGQAqABjRKqAQYwLjE1LjG4AQPIAQD4AQGYAhGgArQSwgIKECMYgAQYJxiKBcICCxAAGIAEGJECGIoFwgIFEAAYgATCAgsQLhiABBjRAxjHAcICBRAuGIAEwgIOEC4YgAQYxwEYjgUYrwHCAhEQLhiABBjHARjLARiOBRivAcICDhAuGIAEGMcBGMsBGK8BwgIKEC4YgAQYChjLAcICCBAAGIAEGMsBwgIKEAAYgAQYChjLAcICBxAAGIAEGArCAg0QLhiABBjHARgKGK8BwgINEC4YgAQYxwEYDRivAcICCRAAGIAEGAoYDcICAhAmwgIIEAAYFhgeGA_CAgYQABgWGB6YAwDiAwUSATEgQJIHBjEuMTUuMaAHtKMB&sclient=gws-wiz"
                                        class="d-xl-block d-none">
-                                        <img src="{{ \Illuminate\Support\Facades\Storage::url($heroImage) }}" class="hero-img h-700px object-fit-contain position-relative z-1"/>
+                                        <img src="{{ asset('front/img/gr.svg') }}" class="hero-img h-100px object-fit-contain position-relative z-1"/>
                                     </a>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@
                             <div class="hero-image position-relative mt-md-0 mt-4">
                                 <div
                                     class="shape w-700px h-700px bg-white rounded-circle position-absolute start-0 top-0"></div>
-                                <img src="{{ asset('front/img/gr.svg') }}"
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($heroImage) }}"
                                      class="hero-img h-700px object-fit-contain position-relative z-1"/>
                             </div>
                         </div>
