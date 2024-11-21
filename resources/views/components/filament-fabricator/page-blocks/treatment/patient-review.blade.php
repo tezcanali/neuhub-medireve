@@ -21,14 +21,14 @@
         <div class="swiper-wrapper">
             @foreach($reviews as $review)
                 <div class="swiper-slide w-auto">
-                    <a href="{{ $review['reviewLink'] }}" class="w-600px 400px d-block overflow-hidden rounded-1 position-relative hover-img-scale">
+                    <a href="{{ $review['review_link'] }}" class="w-600px 400px d-block overflow-hidden rounded-1 position-relative hover-img-scale">
                         <div class="d-flex gap-4 position-absolute start-0 bottom-0 m-xl-5 m-4 z-3 text-white">
                             <div class="d-flex flex-column">
-                                <div class="fs-5 fw-normal">{{ $review['patientName'] }}</div>
-                                <div class="fs-15">{{ $review['procedureText'] }}</div>
+                                <div class="fs-5 fw-normal">{{ $review['patient_name'] }}</div>
+                                <div class="fs-15">{{ $review['procedure_text'] }}</div>
                             </div>
                         </div>
-                        <img src="{{ \Illuminate\Support\Facades\Storage::url($review['reviewImage']) }}" class="w-100 h-100 object-fit-cover"/>
+                        <img src="{{ \Illuminate\Support\Facades\Storage::url($review['review_image']) }}" class="w-100 h-100 object-fit-cover"/>
                     </a>
                 </div>
             @endforeach
