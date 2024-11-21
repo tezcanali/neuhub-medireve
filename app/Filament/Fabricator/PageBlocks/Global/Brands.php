@@ -12,7 +12,7 @@ class Brands extends PageBlock
 {
     public static function getBlockSchema(): Block
     {
-        return Block::make('treatment.brands')
+        return Block::make('global.brands')
             ->schema([
                 Repeater::make('brands')
                     ->label('Markalar')
