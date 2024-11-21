@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('job_title');
             $table->text('content');
-            $table->text('associations');
-            $table->text('publications');
+            $table->text('associations')->nullable();
+            $table->text('publications')->nullable();
             $table->json('social');
             $table->timestamps();
         });
