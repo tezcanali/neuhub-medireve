@@ -65,7 +65,7 @@ class ProcessList extends PageBlock
                     ->label('Alt İçerik')
                     ->columnSpan(6),
             ])
-            ->columns(6)->visible(fn ($get) => $get('../layout') == 'treatment');
+            ->columns(6);
     }
 
     public static function mutateData(array $data): array

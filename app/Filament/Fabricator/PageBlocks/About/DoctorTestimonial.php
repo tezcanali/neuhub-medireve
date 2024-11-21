@@ -55,7 +55,7 @@ class DoctorTestimonial extends PageBlock
                     ->itemLabel(fn (array $state): ?string => $state['doctor_name'] ?? null)
                     ->columns(6),
             ])
-            ->columns(6);
+            ->columns(6)->visible(fn ($get) => $get('../layout') == 'about');
     }
 
     public static function mutateData(array $data): array

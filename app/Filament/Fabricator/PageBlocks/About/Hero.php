@@ -34,7 +34,7 @@ class Hero extends PageBlock
                             ->label('Menü Metni')
                             ->required()
                             ->columnSpan(3),
-                            
+
                         TextInput::make('link')
                             ->label('Menü Linki')
                             ->default('#')
@@ -81,7 +81,7 @@ class Hero extends PageBlock
                     ->acceptedFileTypes(['image/*'])
                     ->columnSpan(6),
             ])
-            ->columns(6);
+            ->columns(6)->visible(fn ($get) => $get('../layout') == 'about');
     }
 
     public static function mutateData(array $data): array

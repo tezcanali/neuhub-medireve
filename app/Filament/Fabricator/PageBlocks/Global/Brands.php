@@ -38,7 +38,7 @@ class Brands extends PageBlock
                     ->columns(4)
                     ->collapsed()
                     ->columnSpanFull()
-            ])->visible(fn ($get) => $get('../layout') == 'treatment');
+            ]);
     }
 
     public static function mutateData(array $data): array

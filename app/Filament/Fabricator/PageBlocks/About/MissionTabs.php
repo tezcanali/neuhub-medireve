@@ -28,13 +28,13 @@ class MissionTabs extends PageBlock
                                     ->directory('about/mission-tabs')
                                     ->optimize('webp')
                                     ->columnSpan(6),
-                                    
+
                                 RichEditor::make('mission_content')
                                     ->label('Misyon İçeriği')
                                     ->required()
                                     ->columnSpan(6),
                             ]),
-                            
+
                         Tabs\Tab::make('vision')
                             ->label('Vizyonumuz')
                             ->schema([
@@ -47,13 +47,13 @@ class MissionTabs extends PageBlock
                                     ->directory('about/mission-tabs')
                                     ->optimize('webp')
                                     ->columnSpan(6),
-                                    
+
                                 RichEditor::make('vision_content')
                                     ->label('Vizyon İçeriği')
                                     ->required()
                                     ->columnSpan(6),
                             ]),
-                            
+
                         Tabs\Tab::make('values')
                             ->label('Değerlerimiz')
                             ->schema([
@@ -66,7 +66,7 @@ class MissionTabs extends PageBlock
                                     ->directory('about/mission-tabs')
                                     ->optimize('webp')
                                     ->columnSpan(6),
-                                    
+
                                 RichEditor::make('values_content')
                                     ->label('Değerler İçeriği')
                                     ->required()
@@ -75,7 +75,7 @@ class MissionTabs extends PageBlock
                     ])
                     ->columnSpanFull(),
             ])
-            ->columns(6);
+            ->columns(6)->visible(fn ($get) => $get('../layout') == 'about');
     }
 
     public static function mutateData(array $data): array
