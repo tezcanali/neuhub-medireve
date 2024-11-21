@@ -3,6 +3,7 @@
 namespace App\Filament\Fabricator\PageBlocks\Treatment;
 
 use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
@@ -37,17 +38,8 @@ class ImageText extends PageBlock
                     ->acceptedFileTypes(['image/*'])
                     ->columnSpan(6),
 
-                Repeater::make('steps')
-                    ->label('Adımlar')
-                    ->schema([
-                        Textarea::make('step_content')
-                            ->label('Adım İçeriği')
-                            ->required()
-                    ])
-                    ->defaultItems(5)
-                    ->columnSpanFull()
-                    ->collapsible()
-                    ->itemLabel(fn (array $state): ?string => $state['step_content'] ?? null)
+                RichEditor::make('content')
+                ->label('İçerik'),
             ])
             ->columns(6)->visible(fn ($get) => $get('../layout') == 'treatment');
     }

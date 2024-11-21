@@ -25,9 +25,7 @@
         </div>
         <img src="{{ \Illuminate\Support\Facades\Storage::url($contentImage) }}" class="w-100 h-300px object-fit-cover mb-lg-5 mb-4 mt-lg-0 mt-3"/>
         <p class="fw-light">
-            @foreach($steps as $step)
-                <li>{{ $step['stepContent'] }}</li>
-            @endforeach
+           {!! $content !!}
         </p>
     </div>
 </section>
