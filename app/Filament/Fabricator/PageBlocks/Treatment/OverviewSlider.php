@@ -66,6 +66,7 @@ class OverviewSlider extends PageBlock
                     ])
                     ->defaultItems(3)
                     ->columnSpanFull()
+                    ->cloneable()
                     ->collapsible()
                     ->collapsed()
                     ->itemLabel(fn (array $state): ?string => $state['slide_title'] ?? null)
