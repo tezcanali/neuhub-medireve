@@ -19,7 +19,7 @@
                     <div class="swiper-slide">
                         <div class="row g-0">
                             <div class="col-lg-6">
-                                <img src="{{ $slide['slide_image'] }}" class="w-100 h-500px object-fit-cover tech-img position-relative z-3"/>
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($slide['slide_image']) }}" class="w-100 h-500px object-fit-cover tech-img position-relative z-3"/>
                             </div>
                             <div class="col-lg-6">
                                 <div class="bg-primary p-lg-5 p-4 rounded-3 rounded-start-0 position-relative">
