@@ -95,7 +95,7 @@
                         <div class="text-white pb-4">
                             {{ Str::limit(strip_tags($featuredBlog->content), 200) }}
                         </div>
-                        <a href="/blog/{{ $featuredBlog->slug }}" class="btn btn-teal text-primary mt-lg-4 px-5">Devamını Oku ></a>
+                        <a href="/blog/{{ $featuredBlog->slug }}" class="btn btn-teal text-primary mt-lg-4 px-5">Read More ></a>
                     </div>
                     <div class="col-lg-6">
                         <img src="{{ Storage::url($featuredBlog->image) }}" class="img-fluid px-xl-5 px-lg-4 mt-lg-0 mt-4"/>
@@ -123,7 +123,7 @@
                                     <div class="fs-3 fw-normal text-blue-3">{{ $secondBlog->title }}</div>
                                     <p class="text-gray-600">{{ Str::limit(strip_tags($secondBlog->content), 150) }}</p>
                                     <div class="d-inline-flex">
-                                        <span class="btn btn-blue-3 text-primary px-5 text-white">Devamını Oku ></span>
+                                        <span class="btn btn-blue-3 text-primary px-5 text-white">Read More ></span>
                                     </div>
                                 </div>
                             </a>
