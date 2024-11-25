@@ -62,10 +62,6 @@ class Founder extends PageBlock
                                     ->default('Our Mission')
                                     ->required()
                                     ->columnSpan(6),
-                                Textarea::make('mission_content')
-                                    ->label('Misyon İçeriği')
-                                    ->required()
-                                    ->columnSpan(6),
                             ]),
                         Tabs\Tab::make('vision')
                             ->label('Vizyonumuz')
@@ -74,20 +70,12 @@ class Founder extends PageBlock
                                     ->label('Vizyon Sekmesi Başlığı')
                                     ->required()
                                     ->columnSpan(6),
-                                Textarea::make('vision_content')
-                                    ->label('Vizyon İçeriği')
-                                    ->required()
-                                    ->columnSpan(6),
                             ]),
                         Tabs\Tab::make('values')
                             ->label('Değerlerimiz')
                             ->schema([
                                 TextInput::make('values_tab_title')
                                     ->label('Değerler Sekmesi Başlığı')
-                                    ->required()
-                                    ->columnSpan(6),
-                                Textarea::make('values_content')
-                                    ->label('Değerler İçeriği')
                                     ->required()
                                     ->columnSpan(6),
                             ]),
