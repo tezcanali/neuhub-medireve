@@ -39,7 +39,7 @@ class BlogCategory extends Model
         return 'slug';
     }
 
-    public function blog()
+    public function blogs()
     {
         return $this->hasMany(Blog::class, 'category_id', 'id');
     }

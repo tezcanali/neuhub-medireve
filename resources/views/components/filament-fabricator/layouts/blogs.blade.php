@@ -89,7 +89,7 @@
                         <div class="text-white ls-1 pb-4">{{ $featuredBlog->category->title }}</div>
                         <div class="fs-50 fw-semibold text-white lh-sm pb-4">{{ $featuredBlog->title }}</div>
                         <div class="text-white pb-4">
-                            <span class="text-teal">{{ $featuredBlog->author->name }}</span> | 
+                            <span class="text-teal">{{ $featuredBlog->author->name }}</span> |
                             {{ $featuredBlog->created_at->format('M d, Y') }}
                         </div>
                         <div class="text-white pb-4">
@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="d-flex flex-column gap-3">
                                     <div class="text-gray-700 fs-14 fw-light">
-                                        <span class="text-blue-3">{{ $secondBlog->author->name }}</span> | 
+                                        <span class="text-blue-3">{{ $secondBlog->author->name }}</span> |
                                         {{ $secondBlog->created_at->format('M d, Y') }}
                                     </div>
                                     <div class="fs-3 fw-normal text-blue-3">{{ $secondBlog->title }}</div>
@@ -137,7 +137,7 @@
                                         <img src="{{ Storage::url($blog->image) }}" class="w-100px h-100px object-fit-cover flex-shrink-0"/>
                                         <div class="d-flex flex-column gap-2">
                                             <div class="text-gray-700 fs-14 fw-light">
-                                                <span class="text-blue-3">{{ $blog->author->name }}</span> | 
+                                                <span class="text-blue-3">{{ $blog->author->name }}</span> |
                                                 {{ $blog->created_at->format('M d, Y') }}
                                             </div>
                                             <div class="fs-4 fw-semibold text-blue-3">{{ $blog->title }}</div>
