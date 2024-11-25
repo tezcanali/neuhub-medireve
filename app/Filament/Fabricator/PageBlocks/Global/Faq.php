@@ -13,7 +13,7 @@ class Faq extends PageBlock
 {
     public static function getBlockSchema(): Block
     {
-        return Block::make('treatment.faq')
+        return Block::make('global.faq')
             ->schema([
                 TextInput::make('title')
                     ->label('Başlık')
