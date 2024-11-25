@@ -43,8 +43,6 @@
 
 @include('front.layout.header')
 <main>
-
-
     <x-filament-fabricator::page-blocks :blocks="$page->blocks"/>
 </main>
 

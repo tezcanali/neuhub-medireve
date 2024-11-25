@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('blog_categories', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('content')->nullable();
+            $table->text('content')->nullable();
             $table->string('slug');
-            $table->string('icon')->nullable();
+            $table->text('icon')->nullable();
             $table->timestamps();
         });
     }

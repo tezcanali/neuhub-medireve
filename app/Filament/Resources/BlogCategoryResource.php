@@ -41,7 +41,7 @@ class BlogCategoryResource extends Resource
                         ->schema([
                             TextInput::make('title')->required()->label('Başlık'),
                             Textarea::make('icon')->required()->label('Icon SVG'),
-                            Textarea::make('content')->required()->label('İçerik'),
+                            Textarea::make('content')->label('İçerik'),
                         ]),
                     Tabs\Tab::make('SEO')
                         ->schema([
