@@ -17,7 +17,7 @@
                     <div class="swiper-slide">
                         <div class="row g-md-4 g-3">
                             <div class="col-md-5">
-                                <img src="{{ $testimonial['doctor_image'] }}" class="img-fluid"/>
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($testimonial['doctor_image']) }}" class="img-fluid"/>
                             </div>
                             <div class="col-md-7">
                                 <div class="bg-primary text-white p-lg-5 p-4 h-100 position-relative">

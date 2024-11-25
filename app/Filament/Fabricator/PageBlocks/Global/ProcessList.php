@@ -3,6 +3,7 @@
 namespace App\Filament\Fabricator\PageBlocks\Global;
 
 use Filament\Forms\Components\Builder\Block;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -61,9 +62,21 @@ class ProcessList extends PageBlock
                     ->required()
                     ->columnSpan(6),
 
-                Textarea::make('bottom_content')
-                    ->label('Alt İçerik')
-                    ->columnSpan(6),
+                Repeater::make('brands')
+                ->label('Logolar')
+                ->schema([
+                    FileUpload::make('image')
+                        ->label('Görsel')
+                        ->image()
+                        ->required()
+                        ->maxSize(150000)
+                        ->disk('public')
+                        ->directory('global/process-list')
+                        ->optimize('webp')
+                        ->deletable(true)
+                        ->acceptedFileTypes(['image/*'])
+                        ->columnSpan(6),
+                ])
             ])
             ->columns(6);
     }
