@@ -107,7 +107,7 @@ class PageHeader extends PageBlock
                     ])
                     ->columnSpanFull()
             ])
-            ->columns(6);
+            ->columns(6)->visible(fn ($get) => in_array($get('../layout'), ['blogs', 'before-after']));
     }
 
     public static function mutateData(array $data): array
