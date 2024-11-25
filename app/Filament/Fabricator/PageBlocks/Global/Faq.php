@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Filament\Fabricator\PageBlocks\Treatment;
+namespace App\Filament\Fabricator\PageBlocks\Global;
 
 use Filament\Forms\Components\Builder\Block;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Z3d0X\FilamentFabricator\PageBlocks\PageBlock;
 
 class Faq extends PageBlock
@@ -47,7 +47,7 @@ class Faq extends PageBlock
                     ->defaultItems(5)
                     ->columns(6)
                     ->columnSpanFull()
-            ])->visible(fn ($get) => $get('../layout') == 'treatment');
+            ]);
     }
 
     public static function mutateData(array $data): array
