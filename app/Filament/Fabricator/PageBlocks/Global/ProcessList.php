@@ -55,7 +55,7 @@ class ProcessList extends PageBlock
                     ->columnSpanFull()
                     ->collapsible()
                     ->collapsed()
-                    ->itemLabel(fn (array $state): ?string => $state['title'] ?? null),
+                    ->itemLabel(fn(array $state): ?string => $state['title'] ?? null),
 
                 TextInput::make('bottom_title')
                     ->label('Alt Başlık')
@@ -63,20 +63,23 @@ class ProcessList extends PageBlock
                     ->columnSpan(6),
 
                 Repeater::make('brands')
-                ->label('Logolar')
-                ->schema([
-                    FileUpload::make('image')
-                        ->label('Görsel')
-                        ->image()
-                        ->required()
-                        ->maxSize(150000)
-                        ->disk('public')
-                        ->directory('global/process-list')
-                        ->optimize('webp')
-                        ->deletable(true)
-                        ->acceptedFileTypes(['image/*'])
-                        ->columnSpan(6),
-                ])
+                    ->label('Logolar')
+                    ->schema([
+                        FileUpload::make('image')
+                            ->label('Görsel')
+                            ->image()
+                            ->required()
+                            ->maxSize(150000)
+                            ->disk('public')
+                            ->directory('global/process-list')
+                            ->optimize('webp')
+                            ->deletable(true)
+                            ->acceptedFileTypes(['image/*'])
+                            ->columnSpanFull()
+                    ])
+                    ->collapsible()
+                    ->collapsed()
+                    ->columnSpan(6),
             ])
             ->columns(6);
     }
