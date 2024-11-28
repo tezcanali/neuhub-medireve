@@ -7,7 +7,7 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\BeforeAfterController;
 use App\Http\Controllers\FormController;
 
-Route::get('/blog/{slug}', [BlogController::class, 'show']);
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::get('/blog-category/{slug}', [BlogController::class, 'category']);
 Route::get('/doctors/{slug}', [DoctorController::class, 'show']);
 // Route::get('/teams/{slug}', [TeamController::class, 'show']);
