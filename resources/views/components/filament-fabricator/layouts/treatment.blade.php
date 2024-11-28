@@ -1,6 +1,6 @@
 @props(['page'])
     <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     {{ \Filament\Facades\Filament::renderHook('filament-fabricator.head.start') }}
     <meta charset="UTF-8" />
@@ -13,8 +13,6 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#FFF" />
     <meta name="msapplication-TileColor" content="#FFF" />
     <meta name="theme-color" content="#FFF" />
-    <title>Medireve - Hair Transplant Clinic in Turkey</title>
-    <link rel="canonical" href="https://medireve.com/" />
     <link rel="stylesheet" href="{{asset('front/css/fancybox.css')}}" />
     <link rel="stylesheet" href="{{asset('front/css/swiper-bundle.min.css')}}" />
     <link rel="stylesheet" href="{{asset('front/css/main.min.css')}}" />
