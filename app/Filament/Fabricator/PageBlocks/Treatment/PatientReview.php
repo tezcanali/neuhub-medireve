@@ -92,7 +92,6 @@ class PatientReview extends PageBlock
 
                 RichEditor::make('why_content')
                     ->label('Neden İçeriği')
-                    ->required()
                     ->columnSpan(6),
             ])
             ->columns(6)->visible(fn ($get) => $get('../layout') == 'treatment');

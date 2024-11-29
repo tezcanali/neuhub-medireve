@@ -42,7 +42,6 @@ class Timeline extends PageBlock
                     ->schema([
                         TextInput::make('period_title')
                             ->label('Dönem Başlığı')
-                            ->required()
                             ->columnSpan(3),
 
                         TextInput::make('period_range')

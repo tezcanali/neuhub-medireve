@@ -91,6 +91,41 @@ class GalleryResource extends Resource
                                         'xl' => 6,
                                         '2xl' => 6,
                                     ]),
+                                TextInput::make('additionals.operation')
+                                    ->label('Operation Tech')
+                                    ->columnSpan([
+                                        'sm' => 1,
+                                        'xl' => 2,
+                                        '2xl' => 2,
+                                    ]),
+                                TextInput::make('additionals.graft')
+                                    ->label('Graft')
+                                    ->columnSpan([
+                                        'sm' => 1,
+                                        'xl' => 2,
+                                        '2xl' => 2,
+                                    ]),
+                                TextInput::make('additionals.age')
+                                    ->label('Age')
+                                    ->columnSpan([
+                                        'sm' => 1,
+                                        'xl' => 2,
+                                        '2xl' => 2,
+                                    ]),
+                                TextInput::make('additionals.date')
+                                    ->label('After Foto Date')
+                                    ->columnSpan([
+                                        'sm' => 3,
+                                        'xl' => 3,
+                                        '2xl' => 3,
+                                    ]),
+                                TextInput::make('additionals.country')
+                                    ->label('Country')
+                                    ->columnSpan([
+                                        'sm' => 3,
+                                        'xl' => 3,
+                                        '2xl' => 3,
+                                    ]),
                                 Repeater::make('images')
                                     ->schema([
                                         FileUpload::make('image')

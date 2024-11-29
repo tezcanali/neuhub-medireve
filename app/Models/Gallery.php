@@ -19,10 +19,12 @@ class Gallery extends Model
         'status',
         'images',
         'featured_image',
+        'additionals',
     ];
 
     protected $casts = [
-        'images' => 'array', // Değişiklik: images alanını dizi olarak tanımlayın
+        'images' => 'array',
+        'additionals' => 'array'
     ];
 
     /**

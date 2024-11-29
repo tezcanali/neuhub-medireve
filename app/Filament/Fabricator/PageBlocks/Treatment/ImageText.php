@@ -23,7 +23,6 @@ class ImageText extends PageBlock
 
                 TextInput::make('subtitle')
                     ->label('Alt Başlık')
-                    ->required()
                     ->columnSpan(3),
 
                 FileUpload::make('content_image')

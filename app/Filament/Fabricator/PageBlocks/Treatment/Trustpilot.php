@@ -52,7 +52,7 @@ class Trustpilot extends PageBlock
                     ->required()
                     ->columnSpan(3),
             ])
-            ->columns(6)->visible(fn ($get) => $get('../layout') == 'treatment');
+            ->columns(6);
     }
 
     public static function mutateData(array $data): array

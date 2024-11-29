@@ -25,7 +25,6 @@ class BeforeAfter extends PageBlock
                     ->columnSpan(2),
                 Textarea::make('footer_note')
                     ->label('Alt Not')
-                    ->required()
                     ->columnSpan(2),
                 Repeater::make('images')
                     ->label('Görseller')

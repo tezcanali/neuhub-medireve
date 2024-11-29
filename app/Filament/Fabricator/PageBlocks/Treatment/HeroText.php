@@ -31,7 +31,6 @@ class HeroText extends PageBlock
 
                 Textarea::make('content')
                     ->label('İçerik')
-                    ->required()
                     ->columnSpan(6),
 
                 TextInput::make('note')
