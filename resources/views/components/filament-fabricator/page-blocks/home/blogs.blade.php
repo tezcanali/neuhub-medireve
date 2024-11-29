@@ -8,19 +8,22 @@
                 </svg>
             </div>
             <span class="w-1px h-35px bg-primary bg-opacity-25"></span>
-            <div class="title fs-1 fw-lighter">Blog</div>
+            <div class="title fs-1 fw-lighter">{{ $title }}</div>
         </div>
     </div>
     <div class="blog-list swiper">
         <div class="swiper-wrapper">
+            @foreach($blogs as $blog)
             <div class="swiper-slide w-auto">
-                <a href="/what-does-an-m-shaped-hairline-mean.html" class="d-block w-500px border border-black border-opacity-10 rounded-1 p-3 hover-img-scale">
+                <a href="/blog/{{ $blog->slug }}" class="d-block w-500px border border-black border-opacity-10 rounded-1 p-3 hover-img-scale">
                     <div class="image w-100 h-225px overflow-hidden rounded-2">
-                        <img src="/assets/img/blog-big.png" class="w-100 h-100 object-fit-cover" />
+                        <img src="{{ Storage::url($blog->image) }}" 
+                             class="w-100 h-100 object-fit-cover"
+                             alt="{{ $blog->title }}" />
                     </div>
                     <div class="py-4 px-3 text">
-                        <div class="fs-13 pb-2">14.09.2024</div>
-                        <div class="fs-18 fw-light">How is Hair Transplantation Done?</div>
+                        <div class="fs-13 pb-2">{{ $blog->created_at->format('d.m.Y') }}</div>
+                        <div class="fs-18 fw-light">{{ $blog->title }}</div>
                         <hr class="border-black border-opacity-10 opacity-100 my-4" />
                         <div class="d-flex align-items-center gap-3 text-teal read-more">
                             <span>keep reading</span>
@@ -29,54 +32,7 @@
                     </div>
                 </a>
             </div>
-            <div class="swiper-slide w-auto">
-                <a href="understanding-widows-peak.html" class="d-block w-500px border border-black border-opacity-10 rounded-1 p-3 hover-img-scale">
-                    <div class="image w-100 h-225px overflow-hidden rounded-2">
-                        <img src="/assets/img/blogs/f.jpg" class="w-100 h-100 object-fit-cover" />
-                    </div>
-                    <div class="py-4 px-3 text">
-                        <div class="fs-13 pb-2">24.08.2024</div>
-                        <div class="fs-18 fw-light">Understanding Widow’s Peak: What Is It?</div>
-                        <hr class="border-black border-opacity-10 opacity-100 my-4" />
-                        <div class="d-flex align-items-center gap-3 text-teal read-more">
-                            <span>keep reading</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="swiper-slide w-auto">
-                <a href="/what-is-the-typical-age-for-hair-loss" class="d-block w-500px border border-black border-opacity-10 rounded-1 p-3 hover-img-scale">
-                    <div class="image w-100 h-225px overflow-hidden rounded-2">
-                        <img src="/assets/img/blogs/01.jpg" class="w-100 h-100 object-fit-cover" />
-                    </div>
-                    <div class="py-4 px-3 text">
-                        <div class="fs-13 pb-2">30.09.2024</div>
-                        <div class="fs-18 fw-light">What is the Typical Age for Hair Loss?</div>
-                        <hr class="border-black border-opacity-10 opacity-100 my-4" />
-                        <div class="d-flex align-items-center gap-3 text-teal read-more">
-                            <span>keep reading</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="swiper-slide w-auto">
-                <a href="/saw-palmetto-for-hair-loss" class="d-block w-500px border border-black border-opacity-10 rounded-1 p-3 hover-img-scale">
-                    <div class="image w-100 h-225px overflow-hidden rounded-2">
-                        <img src="assets/img/blogs/saw-palmetto.webp" class="w-100 h-100 object-fit-cover" />
-                    </div>
-                    <div class="py-4 px-3 text">
-                        <div class="fs-13 pb-2">30.09.2024</div>
-                        <div class="fs-18 fw-light">Saw Palmetto for Hair Loss: Is It Effective?</div>
-                        <hr class="border-black border-opacity-10 opacity-100 my-4" />
-                        <div class="d-flex align-items-center gap-3 text-teal read-more">
-                            <span>keep reading</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
