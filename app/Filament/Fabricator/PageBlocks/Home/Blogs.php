@@ -43,8 +43,7 @@ class Blogs extends PageBlock
                     ->numeric()
                     ->default(4)
                     ->required(),
-            ])
-            ->columns(12)->visible(fn ($get) => $get('../layout') == 'home');
+            ])->visible(fn ($get) => $get('../layout') == 'home');
     }
 
     public static function mutateData(array $data): array
