@@ -57,7 +57,7 @@ class SocialMedia extends PageBlock
                             ->directory('home/social-media')
                             ->optimize('webp')
                             ->columnSpanFull(),
-                            
+
                         TextInput::make('link')
                             ->label('Görsel Linki')
                             ->url()
@@ -68,7 +68,7 @@ class SocialMedia extends PageBlock
                     ->collapsed()
                     ->cloneable()
                     ->reorderableWithButtons(),
-            ]);
+            ])->visible(fn ($get) => $get('../layout') == 'home');
     }
 
     public static function mutateData(array $data): array

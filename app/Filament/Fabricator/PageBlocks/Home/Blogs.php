@@ -44,7 +44,7 @@ class Blogs extends PageBlock
                     ->default(4)
                     ->required(),
             ])
-            ->columns(12);
+            ->columns(12)->visible(fn ($get) => $get('../layout') == 'home');
     }
 
     public static function mutateData(array $data): array

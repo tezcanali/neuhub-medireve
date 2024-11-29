@@ -9,6 +9,7 @@ return [
         'jobTitle' => 'Ünvan',
         'email' => 'E-posta',
         'phone' => 'Telefon Numarası',
-        'form-type' => 'Form Türü'
+        'form-type' => 'Form Türü',
+        'created_at' => "Oluşturulma Tarihi"
     ],
 ];

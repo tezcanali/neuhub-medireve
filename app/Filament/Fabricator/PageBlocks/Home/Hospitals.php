@@ -29,11 +29,11 @@ class Hospitals extends PageBlock
                             ->directory('home/hospital-logos')
                             ->optimize('webp')
                             ->columnSpanFull(),
-                            
+
                         TextInput::make('name')
                             ->label('Hastane Adı')
                             ->required(),
-                            
+
                         TextInput::make('link')
                             ->label('Link')
                             ->url()
@@ -44,7 +44,7 @@ class Hospitals extends PageBlock
                     ->collapsed()
                     ->cloneable()
                     ->reorderableWithButtons(),
-            ]);
+            ])->visible(fn ($get) => $get('../layout') == 'home');
     }
 
     public static function mutateData(array $data): array

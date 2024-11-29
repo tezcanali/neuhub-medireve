@@ -52,7 +52,7 @@ class LeftTextSlider extends PageBlock
                                     ->reorderableWithButtons(),
                             ]),
                     ])
-            ]);
+            ])->visible(fn ($get) => $get('../layout') == 'home');
     }
 
     public static function mutateData(array $data): array

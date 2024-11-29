@@ -62,7 +62,9 @@ class LeadResource extends Resource
                     ->copyable()
                     ->copyMessage('Telefon Numarası Kopyalandı')
                     ->copyMessageDuration(1500)
-                    ->label(__('table.labels.phone'))
+                    ->label(__('table.labels.phone')),
+                TextColumn::make('created_at')
+                    ->label(__('table.labels.created_at')),
             ])->defaultSort('created_at', 'desc')
             ->filters([
                 //

@@ -46,7 +46,7 @@ class Hero extends PageBlock
                                     ->collapsible()
                                     ->collapsed()
                                     ->reorderableWithButtons()
-                                    ->itemLabel(fn (array $state): ?string => $state['title'] ?? null),
+                                    ->itemLabel(fn(array $state): ?string => $state['title'] ?? null),
                             ]),
 
                         // Treatments Tab'i
@@ -81,10 +81,10 @@ class Hero extends PageBlock
                                     ->collapsible()
                                     ->collapsed()
                                     ->reorderableWithButtons()
-                                    ->itemLabel(fn (array $state): ?string => $state['title'] ?? null),
+                                    ->itemLabel(fn(array $state): ?string => $state['title'] ?? null),
                             ])
                     ])
-                                    ]);
+            ])->visible(fn ($get) => $get('../layout') == 'home');
     }
 
     public static function mutateData(array $data): array

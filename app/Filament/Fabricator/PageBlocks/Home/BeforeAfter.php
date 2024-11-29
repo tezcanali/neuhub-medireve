@@ -56,7 +56,7 @@ class BeforeAfter extends PageBlock
                                     ->reorderableWithButtons(),
                             ]),
                     ])
-            ])->label('Home Before After');
+            ])->label('Home Before After')->visible(fn ($get) => $get('../layout') == 'home');
     }
 
     public static function mutateData(array $data): array

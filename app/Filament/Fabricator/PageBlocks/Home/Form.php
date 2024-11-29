@@ -26,20 +26,20 @@ class Form extends PageBlock
                                     ->label('Başlık')
                                     ->default('Find out if you are suitable for a hair transplant with our Clinic!')
                                     ->required(),
-                                    
+
                                 FileUpload::make('image')
                                     ->label('Görsel')
                                     ->image()
                                     ->maxSize(150000)
                                     ->disk('public')
                                     ->directory('form-images'),
-                                    
+
                                 TextInput::make('contact_text')
                                     ->label('İletişim Metni')
                                     ->default('Get a FREE hair analysis in 24h from our Medical Expert'),
                             ]),
 
-                        // Form Ayarları Tab'i    
+                        // Form Ayarları Tab'i
                         Tabs\Tab::make('form')
                             ->label('Form Ayarları')
                             ->schema([
@@ -52,7 +52,7 @@ class Form extends PageBlock
                                     ])
                                     ->defaultItems(3)
                                     ->collapsible(),
-                                    
+
                                 TextInput::make('recaptcha_key')
                                     ->label('reCAPTCHA Site Key')
                                     ->default('6Ley1WgqAAAAAEcd7Qk_2gtnzuxjNvp-hD6a4rqR'),
@@ -65,18 +65,18 @@ class Form extends PageBlock
                                 TextInput::make('footer_title')
                                     ->label('Alt Başlık')
                                     ->default('Book Your Free Consultation'),
-                                    
+
                                 Textarea::make('footer_description')
                                     ->label('Alt Açıklama')
                                     ->default('Book your free consultation today and take the first step towards restoring your hair and confidence.'),
-                                    
+
                                 FileUpload::make('footer_image')
                                     ->label('Alt Görsel')
                                     ->image()
                                     ->maxSize(150000)
                                     ->disk('public')
                                     ->directory('form-images'),
-                                    
+
                                 TextInput::make('footer_link')
                                     ->label('Alt Bölüm Link')
                                     ->default('/contact'),
@@ -84,7 +84,7 @@ class Form extends PageBlock
                     ])
                     ->columnSpanFull()
             ])
-            ->columns(12);
+            ->columns(12)->visible(fn ($get) => $get('../layout') == 'home');
     }
 
     public static function mutateData(array $data): array
