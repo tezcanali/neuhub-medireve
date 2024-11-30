@@ -2,11 +2,12 @@
     use Datlechin\FilamentMenuBuilder\Models\Menu;
     $web_menu = Menu::location('header');
     $mobil_menu = Menu::location('mobil_header');
+    $settings = \Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting::find(1);
 @endphp
 <div class="offcanvas offcanvas-start" tabindex="-1" id="mobile-menu" aria-labelledby="mobile-menu-label">
     <div class="offcanvas-header px-4 pt-4 d-flex align-items-center justify-content-between">
         <a href="/" class="d-block text-white">
-            <img src="assets/img/logo.png" class="d-block h-30px"/>
+            <img src="{{ \Illuminate\Support\Facades\Storage::url($settings->site_logo) }}" class="d-block h-30px"/>
         </a>
         <button type="button" class="shadow-none px-0 w-50px h-50px rounded-circle border border-gray-500"
                 data-bs-dismiss="offcanvas" aria-label="Close">
@@ -59,7 +60,7 @@
             <!-- logo -->
             <div class="logo d-flex align-items-center gap-4 flex-1">
                 <a href="/" class="d-block text-white">
-                    <img src="assets/img/logo.png" class="d-block"/>
+                    <img src="{{ \Illuminate\Support\Facades\Storage::url($settings->site_logo) }}" class="d-block"/>
                 </a>
                 <span class="fs-12 text-secondary lh-sm d-md-block d-none">
                     Years of Innovation in <br/>Hair Restoration

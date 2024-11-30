@@ -1,5 +1,6 @@
 @php
     use Datlechin\FilamentMenuBuilder\Models\Menu;$menu = Menu::location('footer');
+    $settings = \Joaopaulolndev\FilamentGeneralSettings\Models\GeneralSetting::find(1);
 @endphp
 <footer class="bg-gray-400 pt-md-5">
     <div class="bg-primary">
@@ -82,34 +83,7 @@
                     class="d-flex align-items-center justify-content-xl-between justify-content-center gap-xl-5 gap-4 py-xl-4 flex-xl-row flex-column">
                     <div class="logo d-flex align-items-center gap-4 flex-1 flex-shrink-0">
                         <a href="/" class="d-block text-white">
-                            <svg class="d-block" width="182" height="23" viewBox="0 0 182 23" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M0 22.9998V4.3335H3.62L12.564 10.3903H12.699L21.642 4.3335H25.262V22.9998H20.939V9.55489L14.806 13.5231V22.9998H10.483V13.5231L4.323 9.55489V22.9998H0Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M29.0469 22.9998V4.3335H50.2289V7.72739H33.3699V11.8522H48.6619V15.2461H33.3699V19.6059H50.2289V22.9998H29.0469Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M53.1953 23V4.33372H56.3843L65.0303 4.30762C68.5243 4.30762 71.2353 5.09951 73.1623 6.68331C75.0893 8.26711 76.0533 10.5906 76.0533 13.6538C76.0533 16.717 75.0893 19.0405 73.1623 20.6243C71.2353 22.2081 68.5243 23 65.0303 23H53.1953ZM64.7323 7.70152H57.5183V19.6061H64.7323C67.0023 19.6061 68.7223 19.1275 69.8933 18.1703C71.0643 17.213 71.6493 15.7075 71.6493 13.6538C71.6493 11.5827 71.0643 10.0772 69.8933 9.13731C68.7223 8.18011 67.0023 7.70152 64.7323 7.70152Z"
-                                    fill="currentColor"
-                                ></path>
-                                <path d="M78.7578 22.9998V4.3335H83.0808V22.9998H78.7578Z" fill="currentColor"></path>
-                                <path d="M78.25 2.9501V0H83.573V2.9501H78.25Z" fill="currentColor"></path>
-                                <path
-                                    d="M86.8594 22.9998V4.3335H103.043C105.042 4.3335 106.591 4.82079 107.69 5.79549C108.807 6.77009 109.365 8.2495 109.365 10.2336C109.365 11.9219 108.96 13.2446 108.149 14.2018C107.339 15.1591 106.186 15.7595 104.691 16.0032L109.149 22.9998H104.232L100.098 16.1337H91.1824V22.9998H86.8594ZM102.53 7.72739H91.1824V12.7138L102.53 12.7399C103.322 12.7399 103.926 12.5484 104.34 12.1655C104.772 11.7826 104.988 11.1387 104.988 10.2336C104.988 9.3112 104.772 8.6672 104.34 8.3017C103.926 7.9188 103.322 7.72739 102.53 7.72739Z"
-                                    fill="currentColor"
-                                ></path>
-                                <path
-                                    d="M112.609 22.9998V4.3335H133.791V7.72739H116.932V11.8522H132.224V15.2461H116.932V19.6059H133.791V22.9998H112.609Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M143.559 22.9998L134.859 4.3335H139.56L146.72 19.7365H147.071L154.231 4.3335H158.932L150.232 22.9998H143.559Z"
-                                    fill="currentColor"></path>
-                                <path
-                                    d="M160.82 22.9998V4.3335H182.002V7.72739H165.143V11.8522H180.435V15.2461H165.143V19.6059H182.002V22.9998H160.82Z"
-                                    fill="currentColor"></path>
-                            </svg>
+                            <img src="{{ \Illuminate\Support\Facades\Storage::url($settings->site_logo) }}" />
                         </a>
                         <span class="fs-12 text-secondary lh-sm d-xl-block d-none"
                         >Years of Innovation in <br/>
