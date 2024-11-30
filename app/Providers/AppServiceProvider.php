@@ -65,6 +65,20 @@ class AppServiceProvider extends ServiceProvider
         );
 
         FilamentView::registerRenderHook(
+            'filament-fabricator.scripts.start',
+            function (): string {
+                $setting = GeneralSetting::find(1);
+
+                if ($setting && !empty($setting->more_configs)) {
+                    $configs = is_array($setting->more_configs) ? $setting->more_configs : json_decode($setting->more_configs, true);
+
+                    return isset($configs['footer']) ? $configs['footer'] : '';
+                }
+                return '';
+            }
+        );
+
+        FilamentView::registerRenderHook(
             'filament-fabricator.body.end',
             fn (): string => Blade::render('front/layout/footer'),
         );
