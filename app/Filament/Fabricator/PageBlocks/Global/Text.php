@@ -15,7 +15,6 @@ class Text extends PageBlock
             ->schema([
                 TextInput::make('title')
                     ->label('Başlık')
-                    ->required()
                     ->columnSpan(6),
 
                     TinyEditor::make('content')

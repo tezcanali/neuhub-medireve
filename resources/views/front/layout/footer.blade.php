@@ -217,9 +217,9 @@
                 class="footer-link d-flex align-items-center justify-content-lg-between justify-content-center py-xl-5 py-4 border-top border-bottom border-blue-5 gap-3 flex-wrap">
                 <div
                     class="d-flex align-items-center justify-content-md-start justify-content-center flex-wrap gap-xl-4 gap-md-3 gap-2 text-white">
-                    <a href="/privacy-policy.html" class="d-block">Privacy Policy</a>
-                    <a href="/terms-of-use.html" class="d-block">Terms & Conditions</a>
-                    <a href="/medical-travel-insurance.html" class="d-block">Medical Travel Insurance</a>
+                    <a href="/privacy-policy" class="d-block">Privacy Policy</a>
+                    <a href="/terms-conditions" class="d-block">Terms & Conditions</a>
+                    <a href="/medical-travel-insurance" class="d-block">Medical Travel Insurance</a>
                 </div>
                 <div class="text-teal text-md-start text-center">Medireve has 4.8 out of stars 345 reviews on
                     trustpilot.com
