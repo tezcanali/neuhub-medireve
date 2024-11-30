@@ -40,8 +40,7 @@ class PageHeader2 extends PageBlock
                                     ->required(),
 
                                 TextInput::make('description')
-                                    ->label('Açıklama')
-                                    ->required(),
+                                    ->label('Açıklama'),
                             ]),
 
                         Tabs\Tab::make('Breadcrumb')
@@ -52,7 +51,7 @@ class PageHeader2 extends PageBlock
                                         TextInput::make('title')
                                             ->label('Başlık')
                                             ->required(),
-                                            
+
                                         TextInput::make('link')
                                             ->label('Link')
                                             ->nullable(),
