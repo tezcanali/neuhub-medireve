@@ -25,7 +25,7 @@
         {{ $tag }}
     @endforeach
 
-    {!! seo()->for($blog) !!}
+    {!! seo()->for($doctor) !!}
 
     @foreach (\Z3d0X\FilamentFabricator\Facades\FilamentFabricator::getStyles() as $name => $path)
         @if (\Illuminate\Support\Str::of($path)->startsWith('<'))
