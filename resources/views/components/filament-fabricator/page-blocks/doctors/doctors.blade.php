@@ -16,7 +16,7 @@
                             <hr class="my-4 border-black border-opacity-25 opacity-100" />
                             <div class="d-flex flex-column gap-1">
                                 <div class="fs-15 fw-light">EDUCATION</div>
-                                <span class="fs-14 fw-light">{{ $doctor->education }}</span>
+                                <span class="fs-14 fw-light">{!! $doctor->education !!}</span>
                             </div>
                         </a>
                     </div>
