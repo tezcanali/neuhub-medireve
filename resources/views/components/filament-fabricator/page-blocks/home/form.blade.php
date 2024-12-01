@@ -45,6 +45,7 @@
                     </div>
                 </div>
                 <form id="contactForms" action="{{ route('form-submit') }}" method="POST" class="find-form row g-md-3 g-2 row-cols-md-2 row-cols-1 pt-md-3" enctype="multipart/form-data">
+                    @csrf
                     <input type="hidden" name="form_id" value="contactForm" />
                     <div class="col-lg-6">
                         <div class="input-group">
@@ -142,7 +143,7 @@
     document.getElementById('contactForms').addEventListener('submit', function(event) {
         event.preventDefault();
 
-        /*
+
         var response = grecaptcha.getResponse();
 
         if (response.length === 0) {
@@ -153,7 +154,7 @@
                 confirmButtonText: 'Tamam'
             });
             return false;
-        } */
+        }
 
         // Form verilerini topla
         const formData = new FormData(this);

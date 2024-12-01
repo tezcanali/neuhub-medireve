@@ -60,9 +60,9 @@
                     <div class="d-flex align-items-center gap-2">
                         <div class="icon">
                             <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <rect width="18" height="30" transform="matrix(-1 0 0 1 18 0)" fill="url(#pattern0_29_1759)" />
+                                <rect width="18" height="30" transform="matrix(-1 0 0 1 18 0)" fill="url(#pattern0_29_1758)" />
                                 <defs>
-                                    <pattern id="pattern0_29_1759" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <pattern id="pattern0_29_1758" patternContentUnits="objectBoundingBox" width="1" height="1">
                                         <use xlink:href="#image0_29_1759" transform="matrix(0.0294118 0 0 0.0176471 0 -0.0117647)" />
                                     </pattern>
                                     <image

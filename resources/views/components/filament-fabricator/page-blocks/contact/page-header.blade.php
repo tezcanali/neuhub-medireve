@@ -23,9 +23,9 @@
                 <div class="d-flex align-items-center gap-2">
                     <div class="icon">
                         <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <rect width="18" height="30" transform="matrix(-1 0 0 1 18 0)" fill="url(#pattern0_29_1759)" />
+                            <rect width="18" height="30" transform="matrix(-1 0 0 1 18 0)" fill="url(#pattern0_29_1758)" />
                             <defs>
-                                <pattern id="pattern0_29_1759" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <pattern id="pattern0_29_1758" patternContentUnits="objectBoundingBox" width="1" height="1">
                                     <use xlink:href="#image0_29_1759" transform="matrix(0.0294118 0 0 0.0176471 0 -0.0117647)" />
                                 </pattern>
                                 <image
@@ -73,7 +73,8 @@
                 <div class="col-lg-8">
                     <div class="contact-border border-end border-white border-opacity-50 pe-lg-4">
                         <p class="text-gray-400">{{ $formDesc }}</p>
-                        <form  id="contactForm" action="send_mail.php" method="post" class="row g-md-3 g-2 pt-md-3 pb-lg-5 pb-4">
+                        <form  id="contactForms" action="{{ route('form-submit') }}" method="POST" enctype="multipart/form-data" class="row g-md-3 g-2 pt-md-3 pb-lg-5 pb-4">
+                            @csrf
                             <input type="hidden" name="form_id" value="contactForm" />
                             <div class="col-lg-6">
                                 <div class="input-group">
@@ -204,3 +205,70 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    document.getElementById('contactForms').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+
+        var response = grecaptcha.getResponse();
+
+        if (response.length === 0) {
+            Swal.fire({
+                title: 'Uyarı!',
+                text: 'Lütfen robot olmadığınızı doğrulayın.',
+                icon: 'warning',
+                confirmButtonText: 'Tamam'
+            });
+            return false;
+        }
+
+        // Form verilerini topla
+        const formData = new FormData(this);
+
+        // AJAX isteği gönder
+        fetch('{{ route("form-submit") }}', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest',
+            },
+            credentials: 'same-origin'
+        })
+            .then(response => {
+                if (!response.ok) {
+                    return response.json().then(json => Promise.reject(json));
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.status === 'success') {
+                    Swal.fire({
+                        title: 'Başarılı!',
+                        text: data.message,
+                        icon: 'success',
+                        confirmButtonText: 'Tamam'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Formu sıfırla
+                            this.reset();
+                            grecaptcha.reset();
+                        }
+                    });
+                } else {
+                    throw new Error(data.message || 'Bir hata oluştu');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                Swal.fire({
+                    title: 'Hata!',
+                    text: error.message || 'Bir hata oluştu',
+                    icon: 'error',
+                    confirmButtonText: 'Tamam'
+                });
+            });
+    });
+</script>

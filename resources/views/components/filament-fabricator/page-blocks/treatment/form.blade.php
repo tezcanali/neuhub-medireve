@@ -148,7 +148,7 @@
     document.getElementById('contactForms').addEventListener('submit', function (event) {
         event.preventDefault();
 
-        /*
+
         var response = grecaptcha.getResponse();
 
         if (response.length === 0) {
@@ -159,7 +159,7 @@
                 confirmButtonText: 'Tamam'
             });
             return false;
-        } */
+        }
 
         // Form verilerini topla
         const formData = new FormData(this);
