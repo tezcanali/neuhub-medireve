@@ -133,7 +133,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="g-recaptcha" data-sitekey="{{ $recaptchaKey }}"></div>
+                <div class="g-recaptcha" data-sitekey="6Ley1WgqAAAAAEcd7Qk_2gtnzuxjNvp-hD6a4rqR"></div>
                 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
             </div>
             <div class="col-md-6">
