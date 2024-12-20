@@ -100,7 +100,7 @@
         <div class="header-right d-flex align-items-center gap-5 position-relative">
             <!-- button -->
             <div class="button d-flex align-items-center gap-md-3 gap-2">
-                <a href="contact.html"
+                <a href="/contact"
                    class="d-xxl-block d-none btn btn-teal text-primary fw-semibold rounded-pill py-2 px-4">Contact
                     Us</a>
                 <div class="mobile-menu-button d-xxl-none block">

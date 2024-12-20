@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center gap-4">
-                                    <a href="/contact.html" class="d-flex align-items-center gap-4">
+                                    <a href="contact" class="d-flex align-items-center gap-4">
                                         <div
                                             class="w-50px h-50px bg-cyan d-flex align-items-center justify-content-center text-primary">
                                             <i class="fa fa-arrow-right"></i>
