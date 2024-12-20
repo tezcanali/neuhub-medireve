@@ -21,7 +21,7 @@
                     <div class="menu-box pb-3">
                         <div class="menu-box-item border-bottom border-white border-opacity-10">
                             <div class="heading d-flex align-items-center justify-content-between fw-light fs-4">
-                                {{ $item->title }}
+                                <a href="{{ $item->url }}">{{ $item->title }}</a>
                                 @if($item->children->isNotEmpty())
                                     <div class="icon">
                                         <i class="fa fa-chevron-down fs-14"></i>
@@ -40,6 +40,13 @@
                         </div>
                     </div>
                 @endforeach
+                    <div class="menu-box pb-3">
+                        <div class="menu-box-item border-bottom border-white border-opacity-10">
+                            <div class="heading d-flex align-items-center justify-content-between fw-light fs-4">
+                                <a href="/contact">Contact</a>
+                            </div>
+                        </div>
+                    </div>
             </div>
             <hr class="border-gray-500 border-opacity-10 opacity-50 my-4"/>
             <a href="https://wa.me/905346957401" class="d-flex align-items-center gap-3">

@@ -9,7 +9,6 @@ class FormController extends Controller
 {
     public function store(Request $request)
     {
-        // Form verilerini doğrula
         $validated = $request->validate([
             'type' => 'required|string',
             'name' => 'required|string|max:255',
@@ -17,12 +16,10 @@ class FormController extends Controller
             'phone' => 'required|string|max:20',
             'service' => 'required|string',
             'country' => 'required|string',
-            'message' => 'nullable|string',
-            // 'g-recaptcha-response' => 'required'
+            'message' => 'string',
         ]);
 
         try {
-            // Additional array'i oluştur
             $additional = [
                 'service' => $request->service,
                 'country' => $request->country,
@@ -30,7 +27,6 @@ class FormController extends Controller
                 'url' => $request->header('referer'),
             ];
 
-            // Lead oluştur
             Lead::create([
                 'type' => $request->type,
                 'name' => $request->name,

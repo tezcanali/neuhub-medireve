@@ -1,14 +1,12 @@
-// Form ID'si ile formu seçiyoruz
-const form = document.querySelector('#contactForm');  // Form ID'si 'contactForm' ise bunu kullanın
+const form = document.querySelector('#contactForm');
 
-// Telefon inputu için intlTelInput fonksiyonunu başlatıyoruz
 const input = document.querySelector("#phone");
 const iti = window.intlTelInput(input, {
-    initialCountry: "gb",          // Varsayılan olarak Birleşik Krallık
-    preferredCountries: ["gb", "us", "de"], // Tercih edilen ülkeler
+    initialCountry: "gb",
+    preferredCountries: ["gb", "us", "de"],
     separateDialCode: true,        // Alan kodunu ayrı göster
     formatOnDisplay: true,         // Telefon numarasını formatla
-    autoPlaceholder: "polite",     // Nazik placeholder göster
+    autoPlaceholder: "polite",
     customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
         return "e.g. " + selectedCountryPlaceholder;
     },

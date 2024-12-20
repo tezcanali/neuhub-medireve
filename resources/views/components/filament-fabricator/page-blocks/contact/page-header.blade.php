@@ -73,9 +73,10 @@
                 <div class="col-lg-8">
                     <div class="contact-border border-end border-white border-opacity-50 pe-lg-4">
                         <p class="text-gray-400">{{ $formDesc }}</p>
-                        <form  id="contactForms" action="{{ route('form-submit') }}" method="POST" enctype="multipart/form-data" class="row g-md-3 g-2 pt-md-3 pb-lg-5 pb-4">
+                        <form id="contactForms" action="{{ route('form-submit') }}" method="POST" enctype="multipart/form-data" class="row g-md-3 g-2 pt-md-3 pb-lg-5 pb-4">
                             @csrf
                             <input type="hidden" name="form_id" value="contactForm" />
+                            <input type="hidden" name="type" value="Contact Form">
                             <div class="col-lg-6">
                                 <div class="input-group">
                                             <span class="input-group-text bg-gray-400 pe-0">

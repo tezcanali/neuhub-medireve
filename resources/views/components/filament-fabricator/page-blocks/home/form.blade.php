@@ -47,6 +47,7 @@
                 <form id="contactForms" action="{{ route('form-submit') }}" method="POST" class="find-form row g-md-3 g-2 row-cols-md-2 row-cols-1 pt-md-3" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="form_id" value="contactForm" />
+                    <input type="hidden" name="type" value="Contact Form">
                     <div class="col-lg-6">
                         <div class="input-group">
                             <span class="input-group-text bg-gray-400 pe-0">
