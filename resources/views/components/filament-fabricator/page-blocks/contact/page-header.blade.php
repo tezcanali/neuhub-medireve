@@ -100,7 +100,7 @@
                                                     />
                                                 </svg>
                                             </span>
-                                    <input type="email" name="email" class="form-control border-start-0 fw-light" placeholder="Your Mail Adress" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Lütfen geçerli bir e-posta adresi girin." />
+                                    <input type="email" name="email" class="form-control border-start-0 fw-light" placeholder="Your Mail Adress" required title="Lütfen geçerli bir e-posta adresi girin." />
                                 </div>
                             </div>
                             <div class="col-lg-6">
