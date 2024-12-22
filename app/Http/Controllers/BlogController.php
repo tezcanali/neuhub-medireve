@@ -39,28 +39,24 @@ class BlogController extends Controller
         $blog = Blog::findBySlug($slug);
 
         if ($blog && $blog->status == 'published') {
-            // İçindekiler tablosunu oluştur
             $content = $blog->content;
             $dom = new \DOMDocument();
-            libxml_use_internal_errors(true); // HTML5 etiketleri için hata kontrolünü devre dışı bırak
+            libxml_use_internal_errors(true);
             @$dom->loadHTML(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8'));
             libxml_clear_errors();
 
             $tableOfContents = [];
             $xpath = new \DOMXPath($dom);
-            
-            // H2 ve H3 başlıklarını topla
+
             foreach ($xpath->query('//h2|//h3') as $header) {
                 $indent = $header->nodeName === 'h3' ? '- ' : '';
                 $tableOfContents[] = $indent . trim($header->textContent);
             }
 
-            // Aynı kategoriden rastgele 3 ilgili yazı al
             $relatedPosts = Blog::where('category_id', $blog->category_id)
                 ->where('id', '!=', $blog->id)
                 ->where('status', 'published')
                 ->inRandomOrder()
-                ->take(3)
                 ->get();
 
             return view('front.layout.blog', compact('blog', 'tableOfContents', 'relatedPosts'));
