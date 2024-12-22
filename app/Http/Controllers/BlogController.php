@@ -57,6 +57,7 @@ class BlogController extends Controller
                 ->where('id', '!=', $blog->id)
                 ->where('status', 'published')
                 ->inRandomOrder()
+                ->take(3)
                 ->get();
 
             return view('front.layout.blog', compact('blog', 'tableOfContents', 'relatedPosts'));

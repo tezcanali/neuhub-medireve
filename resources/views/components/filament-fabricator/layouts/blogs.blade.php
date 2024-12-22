@@ -176,7 +176,7 @@
                          role="tabpanel"
                          tabindex="0">
                         <div class="blog-tab-list row g-4">
-                            @foreach($category->blogs()->where('status', 'published')->latest()->take(4)->get() as $blog)
+                            @foreach($category->blogs()->where('status', 'published')->latest()->get() as $blog)
                                 <div class="col-lg-4">
                                     <a href="/blog/{{ $blog->slug }}" class="d-flex flex-column gap-4 hover-img-scale">
                                         <div class="image overflow-hidden">
