@@ -195,9 +195,6 @@
                     <a href="/terms-conditions" class="d-block">Terms & Conditions</a>
                     <a href="/medical-travel-insurance" class="d-block">Medical Travel Insurance</a>
                 </div>
-                <div class="text-teal text-md-start text-center">Medireve has 4.8 out of stars 345 reviews on
-                    trustpilot.com
-                </div>
             </div>
             <div class="footer-copy py-xl-5 py-4 text-white text-lg-start text-center w-100">© 2024 Medireve - Hair
                 Restoration & Transplant
