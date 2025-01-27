@@ -21,7 +21,7 @@
                 <div class="col-lg-2 col-md-3">
                     <img src="{{ \Illuminate\Support\Facades\Storage::url($trustpilotLogo) }}" class="img-fluid my-4 pe-xl-4 d-md-block d-none"/>
                     <img src="{{ \Illuminate\Support\Facades\Storage::url($trustpilotLogo) }}" class="h-60px d-md-none d-block"/>
-                    <div class="pt-4">Based on <span class="text-decoration-underline fw-normal">{{ $reviewCount }} reviews</span>
+                    <div class="pt-4">Based on <span class="text-decoration-underline fw-normal">11 reviews</span>
                     </div>
                 </div>
                 <div class="col-lg-10 col-md-9">
