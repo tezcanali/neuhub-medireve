@@ -47,91 +47,45 @@
                                 <div class="swiper-slide">
                                     <div class="d-flex flex-column align-items-start gap-3">
                                         <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">Wonderful DHI hair transplant experience</div>
-                                        <span class="fs-15">I opted for the DHI method and I am extremely pleased with the results. I didn’t feel any pain during the procedure and my doctor was very attentive. Highly recommend!</span>
-                                        <div class="fs-15"><span class="fw-normal">James B.,</span> 2 hours ago</div>
+                                        <div class="fs-18 fw-semibold">I traveled to Istanbul from Manchester…</div>
+                                        <span class="fs-15">I traveled to Istanbul from Manchester for my hair transplant with Medireve, and I’m beyond happy with my choice. Everything was arranged perfectly—the airport pick-up, the hotel, and even the clinic transfers. The only minor thing was that my hotel room didn’t have a city view as promised, but they resolved it the next day without any hassle. The procedure was smooth, and Dr. Tuba Su is truly a gem! She explained everything in detail and made me feel at ease. I received 4,600 grafts in one session, and the results are already starting to show. The PRP session they included also helped my scalp heal quickly. Thank you, Medireve, for such a seamless experience. I’ll be recommending you to everyone I know!</span>
+                                        <div class="fs-15"><span class="fw-normal">Zaid Masri,</span> December 01, 2024</div>
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
                                     <div class="d-flex flex-column align-items-start gap-3">
                                         <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">FUE hair transplant was a great choice</div>
-                                        <span class="fs-15">I had my hair transplant using the FUE technique and the results are incredibly natural. The healing process was faster than I expected, I definitely recommend it.</span>
-                                        <div class="fs-15"><span class="fw-normal">Emily C.,</span>4 hours ago</div>
+                                        <div class="fs-18 fw-semibold">I did a BBL with Dr</div>
+                                        <span class="fs-15">I did a BBL with Dr. Gökhan at Medireve, and I am amazed by the results! I was a little scared because I heard stories of other clinics rushing procedures, but here, everything was done with such care. They took time to answer my questions and ensure I was comfortable. The clinic was spotless, and the staff were so friendly. The hotel was decent, but the breakfast wasn’t really my taste. Still, the hospitality made up for it. Post-op, I received daily follow-ups from the team. I feel confident and so much happier now. Totally recommend this place for cosmetic surgeries.</span>
+                                        <div class="fs-15"><span class="fw-normal">Alaa Sharbaji,</span> December 10, 2024</div>
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
                                     <div class="d-flex flex-column align-items-start gap-3">
                                         <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">Needle Free hair transplant was painless</div>
-                                        <span class="fs-15">As someone who can't tolerate pain well, I chose the Needle Free hair transplant method. I didn’t feel any discomfort during the procedure and the outcome was fantastic.</span>
-                                        <div class="fs-15"><span class="fw-normal">Mark T.,</span> 1 day ago</div>
+                                        <div class="fs-18 fw-semibold">Coming all the way from Sydney to…</div>
+                                        <span class="fs-15">Coming all the way from Sydney to Istanbul for my Sapphire hair transplant was a big decision, but Medireve made it all worthwhile. From the moment I arrived, their team made sure everything went smoothly. The clinic itself was spotless and very modern. The doctor took the time to design a natural-looking hairline that suited me perfectly. During the procedure, I was nervous, but the staff kept checking in to ensure I was okay. The hotel was nice overall, but I had some minor issues with the Wi-Fi. The Medireve team was quick to address it and even offered to switch my room. It’s been 7 months now, and the results are amazing—my hair looks full and natural. I’m so glad I chose Medireve.</span>
+                                        <div class="fs-15"><span class="fw-normal">Kiya Ky,</span> December 12, 2024</div>
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
                                     <div class="d-flex flex-column align-items-start gap-3">
                                         <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">Great results with Sapphire FUE technique</div>
-                                        <span class="fs-15">I had a Sapphire FUE hair transplant, and the results are incredibly natural and impressive. My doctor answered all my questions, and the whole process was smooth.</span>
-                                        <div class="fs-15"><span class="fw-normal">Sarah L.,</span> 3 days ago</div>
+                                        <div class="fs-18 fw-semibold">Choosing Medireve for my Sapphire hair…</div>
+                                        <span class="fs-15">Choosing Medireve for my Sapphire hair transplant was a decision I’ll never regret. The entire team was professional and welcoming, and Dr. Tuba Su’s expertise was evident from the start. There was a small delay in my pre-op consultation, but the staff kept me informed and apologized for the wait. The procedure itself was painless, and I’m already seeing amazing results just four months in. The aftercare package was comprehensive, and the Istanbul tour was a nice touch. Despite the minor inconvenience, Medireve provided an outstanding experience overall.</span>
+                                        <div class="fs-15"><span class="fw-normal">Lucas,</span> December 14, 2024</div>
                                     </div>
                                 </div>
+
                                 <div class="swiper-slide">
                                     <div class="d-flex flex-column align-items-start gap-3">
                                         <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">DHI hair transplant exceeded my expectations
-                                        </div>
-                                        <span class="fs-15">I was a bit nervous about the DHI procedure, but the staff made me feel very comfortable. The results are amazing and look very natural.</span>
-                                        <div class="fs-15"><span class="fw-normal">Tom H.,</span> 6 hours ago</div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="d-flex flex-column align-items-start gap-3">
-                                        <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">FUE method worked wonders for me</div>
-                                        <span class="fs-15">The FUE hair transplant worked wonders for my receding hairline. The whole experience was seamless, and I couldn’t be happier with the results.</span>
-                                        <div class="fs-15"><span class="fw-normal">Rachel M.,</span> 8 hours ago</div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="d-flex flex-column align-items-start gap-3">
-                                        <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">Pain-free Needle Free hair transplant</div>
-                                        <span class="fs-15">Needle Free hair transplant is the way to go if you fear needles like I do. I’m so happy with my decision, and the results speak for themselves.</span>
-                                        <div class="fs-15"><span class="fw-normal">John K.,</span> 2 days ago</div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="d-flex flex-column align-items-start gap-3">
-                                        <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">Happy with my Sapphire FUE hair transplant</div>
-                                        <span class="fs-15">I had my Sapphire FUE procedure done a few weeks ago, and the results are already noticeable. The team was fantastic, and I’m thrilled with how it turned out.</span>
-                                        <div class="fs-15"><span class="fw-normal">Hannah P.,</span> 1 day ago</div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="d-flex flex-column align-items-start gap-3">
-                                        <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">DHI hair transplant was worth it</div>
-                                        <span class="fs-15">I went for the DHI method, and it was definitely worth it. The procedure was quick, and the staff were very professional. My hair looks fuller than ever.</span>
-                                        <div class="fs-15"><span class="fw-normal">David S.,</span> 10 hours ago</div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="d-flex flex-column align-items-start gap-3">
-                                        <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">FUE transplant gave me back my confidence</div>
-                                        <span class="fs-15">After having the FUE hair transplant, I feel like a new person. The process was smooth, and the results are better than I imagined.</span>
-                                        <div class="fs-15"><span class="fw-normal">Sophie L.,</span> 5 hours ago</div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="d-flex flex-column align-items-start gap-3">
-                                        <img src="{{ asset('front/img/trustpilot-logo.png') }}" class="h-20px"/>
-                                        <div class="fs-18 fw-semibold">Needle Free hair transplant is a game-changer
-                                        </div>
-                                        <span class="fs-15">I couldn’t believe how easy the Needle Free hair transplant was. No pain, no fuss, and the results are just incredible.</span>
-                                        <div class="fs-15"><span class="fw-normal">Michael W.,</span> 4 days ago</div>
+                                        <div class="fs-18 fw-semibold">I found Medireve through Facebook when…</div>
+                                        <span class="fs-15">I found Medireve through Facebook when a friend of mine posted about her experience there. After reading her glowing review, I decided to book my own breast augmentation with them. I’m so glad I did! Dr. Gökhan was incredibly professional and made sure I was comfortable throughout the entire procedure. The clinic was modern and clean, and the hotel they booked for me, Wandavista Hotel, was excellent—close to the clinic and very comfortable. There was a slight hiccup with the shuttle transfer, but it was resolved quickly. The procedure went smoothly, and I’m absolutely thrilled with my results!</span>
+                                        <div class="fs-15"><span class="fw-normal">Lilia Halli,</span> January 01, 2025</div>
                                     </div>
                                 </div>
                             </div>
